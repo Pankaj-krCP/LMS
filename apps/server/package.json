@@ -4,9 +4,10 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build": "tsc -b",
-    "start": "node dist/index.js",
-    "dev": "tsc -b && node dist/index.js"
+    "build": "rm -rf dist && tsc -b",
+    "start": "rm -rf dist && node dist/index.js",
+    "clean": "rm -rf dist",
+    "dev": "rm -rf dist && tsc -b && node dist/index.js"
   },
   "keywords": [],
   "author": "pankaj kumar",
