@@ -2,7 +2,9 @@ import "dotenv/config";
 import cors from "cors";
 import cookieParser from "cookie-parser";
 import { app } from "./server";
-import express, { NextFunction } from "express";
+import express from "express";
+import errorHandler from "./utils/errorHandler";
+import errorMiddleware from "./middleware/error";
 
 //body parser middleware
 app.use(express.json({ limit: "50mb" }));
@@ -24,11 +26,7 @@ app.get("/", (req, res) => {
 });
 
 app.all("*", (req, res, next) => {
-  const err = new Error(`Route ${req.originalUrl} not found`) as any;
-  err.statusCode = 404;
-  next(err);
+  throw new errorHandler(`Route ${req.originalUrl} not found`, 404);
 });
 
-app.listen(process.env.PORT, () => {
-  console.log(`server is running on PORT ${process.env.PORT}`);
-});
+app.use(errorMiddleware);
