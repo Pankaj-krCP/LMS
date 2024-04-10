@@ -3,27 +3,17 @@ import cors from "cors";
 import cookieParser from "cookie-parser";
 import { app } from "./server";
 import express from "express";
-import errorHandler from "./utils/errorHandler";
-import errorMiddleware from "./middleware/error";
+import errorHandler from "./utils/errorHandler.helper";
+import errorMiddleware from "./middlewares/error.middleware";
+import authRoute from "./routes/v1/auth.route";
+import userRoute from "./routes/v1/user.route";
 
-//body parser middleware
 app.use(express.json({ limit: "50mb" }));
-
-//cookie parser middleware
 app.use(cookieParser());
+app.use(cors({ origin: process.env.ORIGIN }));
 
-//cors middleware
-app.use(
-  cors({
-    origin: process.env.ORIGIN,
-  })
-);
-
-app.get("/", (req, res) => {
-  res.json({
-    message: "hello world",
-  });
-});
+app.use("/api/v1/auth", authRoute);
+app.use("/api/v1/user", userRoute);
 
 app.all("*", (req, res, next) => {
   throw new errorHandler(`Route ${req.originalUrl} not found`, 404);

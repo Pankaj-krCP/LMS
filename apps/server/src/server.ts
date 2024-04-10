@@ -1,5 +1,5 @@
 import express from "express";
-import connectDB from "./config/dbConnect";
+import connectDB from "./config/db.conf";
 export const app = express();
 
 app.listen(process.env.PORT, () => {
