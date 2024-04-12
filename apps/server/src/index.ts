@@ -5,8 +5,7 @@ import { app } from "./server";
 import express from "express";
 import errorHandler from "./utils/errorHandler.helper";
 import errorMiddleware from "./middlewares/error.middleware";
-import authRoute from "./routes/v1/auth.route";
-import userRoute from "./routes/v1/user.route";
+import { authRoute, userRoute } from "./routes/v1";
 
 app.use(express.json({ limit: "50mb" }));
 app.use(cookieParser());

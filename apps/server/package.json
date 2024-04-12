@@ -7,7 +7,7 @@
     "build": "rm -rf dist && tsc -b",
     "start": "rm -rf dist && node dist/index.js",
     "clean": "rm -rf dist",
-    "dev": "rm -rf dist && tsc -b && node dist/index.js"
+    "dev": "rm -rf dist && tsc-watch --onSuccess \"node dist/index.js\""
   },
   "keywords": [],
   "author": "pankaj kumar",
@@ -24,12 +24,19 @@
     "cookie-parser": "^1.4.6",
     "cors": "^2.8.5",
     "dotenv": "^16.4.5",
+    "ejs": "^3.1.9",
     "esbuild": "^0.20.2",
     "express": "^4.19.2",
     "ioredis": "^5.3.2",
     "jsonwebtoken": "^9.0.2",
     "mongoose": "^8.3.0",
+    "nodemailer": "^6.9.13",
     "ts-node-dev": "^2.0.0",
     "typescript": "^5.4.4"
+  },
+  "devDependencies": {
+    "@types/ejs": "^3.1.5",
+    "@types/nodemailer": "^6.4.14",
+    "tsc-watch": "^6.2.0"
   }
 }

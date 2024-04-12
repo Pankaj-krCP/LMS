@@ -1,7 +1,8 @@
 import express from "express";
 const authRoute = express.Router();
-import { signup } from "../../controllers/auth.controller";
+import { generateOtp, signup } from "../../controllers/auth";
 
+authRoute.post("/generate-otp", generateOtp);
 authRoute.post("/signup", signup);
 
 export default authRoute;
