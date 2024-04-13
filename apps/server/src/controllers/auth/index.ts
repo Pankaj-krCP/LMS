@@ -1,4 +1,4 @@
-import { generateOtp } from "./otp.controller";
+import { generateOtp, verifyOtp } from "./otp.controller";
 import { signup } from "./signup.controller";
 
-export { generateOtp, signup };
+export { generateOtp, verifyOtp, signup };
