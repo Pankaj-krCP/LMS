@@ -15,6 +15,7 @@ interface IUser {
   isVerified: boolean;
   courses: [{ courseId: string }];
   isPasswordMatched: (password: string) => Promise<boolean>;
+  refreshToken: string;
 }
 
 const userSchema = new mongoose.Schema<IUser>(

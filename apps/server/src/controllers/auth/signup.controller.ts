@@ -14,6 +14,10 @@ export const signup = catchAsyncError(
     try {
       const { name, email, password } = req.body;
 
+      if (!email || !name || !password) {
+        throw new errorHandler("Name, email and password is required", 400);
+      }
+
       const emailExist = await userModel.findOne({ email });
       if (emailExist) {
         throw new errorHandler("Email already exist", 409);
@@ -29,8 +33,13 @@ export const signup = catchAsyncError(
         throw new Error("Not able to Create User");
       }
 
+      const responseUser = await userModel
+        .findOne({ email })
+        .select("-password -refreshToken");
+
       res.status(200).json({
-        sucess: true,
+        success: true,
+        data: { user: responseUser },
         message: "User Created Successfully",
       });
     } catch (error) {
