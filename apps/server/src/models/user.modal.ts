@@ -1,9 +1,10 @@
-import mongoose from "mongoose";
+import mongoose, { ObjectId } from "mongoose";
 import bcrypt from "bcryptjs";
 
 const emailValidator: RegExp = /^[^\s@]+@[^\s@]+\.[^\s@]+$/;
 
-interface IUser {
+export interface IUser {
+  _id?: ObjectId;
   name: string;
   email: string;
   password: string;
@@ -54,6 +55,9 @@ const userSchema = new mongoose.Schema<IUser>(
     },
     courses: {
       type: [{ courseId: String }],
+    },
+    refreshToken: {
+      type: String,
     },
   },
   { timestamps: true }

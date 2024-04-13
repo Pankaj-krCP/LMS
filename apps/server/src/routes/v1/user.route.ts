@@ -1,8 +1,8 @@
 import express from "express";
 const userRoute = express.Router();
+import { isAdmin, isLogin } from "../../middlewares/auth.middleware";
+import { getAllUser } from "../../controllers/user";
 
-userRoute.get("/", (req, res) => {
-  res.json({ message: "Sucessfully reached to user routes" });
-});
+userRoute.get("/getalluser", isLogin, isAdmin, getAllUser);
 
 export default userRoute;

@@ -11,10 +11,11 @@ export const verifyUser = catchAsyncError(
         throw new errorHandler("Email is required", 400);
       }
 
-      const updatedUser = await userModel.updateOne(
+      const updatedUser = await userModel.findOneAndUpdate(
         { email },
         { $set: { isVerified: true } }
       );
+
       if (!updatedUser) {
         throw new errorHandler("Not able to verify user", 401);
       }

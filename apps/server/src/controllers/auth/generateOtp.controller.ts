@@ -27,6 +27,7 @@ export const generateOtp = catchAsyncError(
       }
 
       let otp = Math.floor(1000 + Math.random() * 9000).toString();
+
       const otpWithUser: IOtpWithUser = {
         email,
         otp,
