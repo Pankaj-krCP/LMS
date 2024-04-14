@@ -4,6 +4,7 @@ import errorHandler from "../../utils/errorHandler.helper";
 import userModel from "../../models/user.modal";
 import { generateAccessToken } from "../../config/generateAccessToken.config";
 import { generateRefreshToken } from "../../config/generateRefreshToken.config";
+import { setRedisUser } from "../../utils/setRedis.helper";
 
 interface Ilogin {
   email: string;
@@ -36,16 +37,13 @@ export const login = catchAsyncError(
       const accessToken = generateAccessToken(findUser._id.toString());
       const refreshToken = generateRefreshToken(findUser._id.toString());
 
-      const addRefreshTokenToUser = await userModel.findByIdAndUpdate(
-        findUser._id,
-        {
-          $set: { refreshToken: refreshToken },
-        }
+      const responseUser = await userModel.findOneAndUpdate(
+        { _id: findUser._id },
+        { $set: { refreshToken: refreshToken } },
+        { new: true, select: "-password -refreshToken" }
       );
 
-      const responseUser = await userModel
-        .findById(findUser._id)
-        .select("-password -refreshToken");
+      setRedisUser(responseUser);
 
       const options = {
         httpOnly: true,
@@ -59,7 +57,7 @@ export const login = catchAsyncError(
         .json({
           success: true,
           data: {
-            user: findUser,
+            user: responseUser,
             accessToken,
             refreshToken,
           },

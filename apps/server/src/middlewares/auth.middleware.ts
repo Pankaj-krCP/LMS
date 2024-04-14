@@ -2,9 +2,8 @@ import { Response, NextFunction } from "express";
 import catchAsyncError from "./catchAsyncError.middleware";
 import jwt, { Secret } from "jsonwebtoken";
 import errorHandler from "../utils/errorHandler.helper";
-import userModel, { IUser } from "../models/user.modal";
-import { Document } from "mongoose";
 import { CustomRequest } from "../utils/customRequest.helper";
+import { redis } from "../config/redis.conf";
 
 export const isLogin = catchAsyncError(
   async (req: CustomRequest, res: Response, next: NextFunction) => {
@@ -22,15 +21,12 @@ export const isLogin = catchAsyncError(
       );
 
       if (!decodedToken) {
-        throw new errorHandler(
-          "Tokoen has been expired, please login again",
-          401
-        );
+        throw new errorHandler("Token has been expired", 401);
       }
 
-      const findUser = (await userModel.findById(
+      const findUser = redis.get(
         typeof decodedToken !== "string" ? decodedToken?._id.toString() : ""
-      )) as Document<IUser>;
+      );
 
       if (!findUser) {
         throw new errorHandler("User not exist", 404);
@@ -46,7 +42,7 @@ export const isLogin = catchAsyncError(
 
 export const isAdmin = catchAsyncError(
   async (req: CustomRequest, res: Response, next: NextFunction) => {
-    const user = req.user?.toJSON();
+    const user = req.user;
     if (!(user?.role === "admin")) {
       throw new Error("You are not an Admin");
     } else {

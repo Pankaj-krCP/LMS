@@ -2,6 +2,7 @@ import { Request, Response, NextFunction } from "express";
 import catchAsyncError from "../../middlewares/catchAsyncError.middleware";
 import userModel from "../../models/user.modal";
 import errorHandler from "../../utils/errorHandler.helper";
+import { setRedisUser } from "../../utils/setRedis.helper";
 
 export const verifyUser = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
@@ -11,18 +12,18 @@ export const verifyUser = catchAsyncError(
         throw new errorHandler("Email is required", 400);
       }
 
-      const updatedUser = await userModel.findOneAndUpdate(
+      const responseUser = await userModel.findOneAndUpdate(
         { email },
-        { $set: { isVerified: true } }
+        { $set: { isVerified: true } },
+        { new: true, select: "-password -refreshToken" }
       );
 
-      if (!updatedUser) {
+      if (!responseUser) {
         throw new errorHandler("Not able to verify user", 401);
       }
 
-      const responseUser = await userModel
-        .findOne({ email })
-        .select("-password -refreshToken");
+      setRedisUser(responseUser);
+
       res.status(200).json({
         success: true,
         data: { user: responseUser },
