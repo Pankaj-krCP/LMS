@@ -7,7 +7,6 @@ const connectDB = async () => {
     console.log(`Database connected with ${conn.connection.host}`);
   } catch (e: any) {
     console.error(e?.message);
-    setTimeout(connectDB, 5000);
   }
 };
 

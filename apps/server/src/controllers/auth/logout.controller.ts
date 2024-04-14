@@ -32,13 +32,13 @@ export const logout = catchAsyncError(
       };
 
       return res
-        .status(204)
+        .status(200)
         .clearCookie("accessToken", options)
         .clearCookie("refreshToken", options)
         .json({
           success: true,
           message: "logged out successfully",
-        }); //forbidden
+        });
     } catch (error) {
       return next(error);
     }

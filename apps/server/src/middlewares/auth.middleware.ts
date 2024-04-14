@@ -29,9 +29,8 @@ export const isLogin = catchAsyncError(
       );
 
       if (!findUser) {
-        throw new errorHandler("User not exist", 404);
+        throw new errorHandler("You have to Login First", 404);
       }
-      console.log(findUser);
       req.user = findUser;
       next();
     } catch (error) {
