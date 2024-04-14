@@ -4,10 +4,14 @@ import userModel from "../../models/user.modal";
 import errorHandler from "../../utils/errorHandler.helper";
 import { setRedisUser } from "../../utils/setRedis.helper";
 
+interface IReqBody {
+  email: string;
+}
+
 export const verifyUser = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { email } = req.body;
+      const { email } = req.body as IReqBody;
       if (!email) {
         throw new errorHandler("Email is required", 400);
       }

@@ -7,6 +7,10 @@ import otpModel from "../../models/otp.model";
 import sendMail from "../../utils/sendMail.helper";
 import errorHandler from "../../utils/errorHandler.helper";
 
+interface IReqBody {
+  email: string;
+}
+
 interface IOtpWithUser {
   email: string;
   otp: string;
@@ -15,7 +19,7 @@ interface IOtpWithUser {
 export const generateOtp = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { email } = req.body;
+      const { email } = req.body as IReqBody;
 
       if (!email) {
         throw new errorHandler("Email is required", 400);

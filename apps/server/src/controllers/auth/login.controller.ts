@@ -6,7 +6,7 @@ import { generateAccessToken } from "../../config/generateAccessToken.config";
 import { generateRefreshToken } from "../../config/generateRefreshToken.config";
 import { setRedisUser } from "../../utils/setRedis.helper";
 
-interface Ilogin {
+interface IReqBody {
   email: string;
   password: string;
 }
@@ -14,13 +14,13 @@ interface Ilogin {
 export const login = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { email, password } = req.body;
+      const { email, password } = req.body as IReqBody;
 
       if (!email || !password) {
         throw new errorHandler("Email and password is required", 400);
       }
 
-      const loginUser: Ilogin = {
+      const loginUser: IReqBody = {
         email,
         password,
       };

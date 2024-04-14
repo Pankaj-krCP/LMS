@@ -3,7 +3,7 @@ import catchAsyncError from "../../middlewares/catchAsyncError.middleware";
 import errorHandler from "../../utils/errorHandler.helper";
 import userModel from "../../models/user.modal";
 
-interface ISignup {
+interface IReqBody {
   name: string;
   email: string;
   password: string;
@@ -12,7 +12,7 @@ interface ISignup {
 export const signup = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const { name, email, password } = req.body;
+      const { name, email, password } = req.body as IReqBody;
 
       if (!email || !name || !password) {
         throw new errorHandler("Name, email and password is required", 400);
@@ -23,10 +23,10 @@ export const signup = catchAsyncError(
         throw new errorHandler("Email already exist", 409);
       }
 
-      const SignupUser: ISignup = {
-        name: name,
-        email: email,
-        password: password,
+      const SignupUser: IReqBody = {
+        name,
+        email,
+        password,
       };
       const userCreated = await userModel.create(SignupUser);
       if (!userCreated) {

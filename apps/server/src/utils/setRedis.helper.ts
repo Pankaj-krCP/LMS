@@ -1,11 +1,11 @@
 import { redis } from "../config/redis.conf";
 import errorHandler from "./errorHandler.helper";
 
-export const setRedisUser = (user: any) => {
+export const setRedisUser = async (user: any) => {
   if (user && user._id) {
     const userId = user._id.toString();
     const userData = JSON.stringify(user);
-    redis.set(
+    await redis.set(
       userId,
       userData,
       "EX",

@@ -3,7 +3,7 @@ import catchAsyncError from "./catchAsyncError.middleware";
 import jwt, { Secret } from "jsonwebtoken";
 import errorHandler from "../utils/errorHandler.helper";
 import { CustomRequest } from "../utils/customRequest.helper";
-import { redis } from "../config/redis.conf";
+import { getRedisUser } from "../utils/getRedis.helper";
 
 export const isLogin = catchAsyncError(
   async (req: CustomRequest, res: Response, next: NextFunction) => {
@@ -24,14 +24,14 @@ export const isLogin = catchAsyncError(
         throw new errorHandler("Token has been expired", 401);
       }
 
-      const findUser = redis.get(
+      const findUser = await getRedisUser(
         typeof decodedToken !== "string" ? decodedToken?._id.toString() : ""
       );
 
       if (!findUser) {
         throw new errorHandler("User not exist", 404);
       }
-
+      console.log(findUser);
       req.user = findUser;
       next();
     } catch (error) {
