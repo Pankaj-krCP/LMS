@@ -5,6 +5,7 @@ import { updateUser } from "../../controllers/auth";
 import { multerUpload } from "../../middlewares/multer.middleware";
 import {
   Me,
+  deleteProfilePicture,
   getAllUser,
   getUserById,
   updateProfilePicture,
@@ -20,5 +21,6 @@ userRoute.put(
   multerUpload.single("image"),
   updateProfilePicture
 );
+userRoute.delete("/delete-profile", isLogin, deleteProfilePicture);
 
 export default userRoute;

@@ -6,9 +6,10 @@ import { redisClient } from "./config/redis.conf";
 export const app = express();
 
 // Create temp/my-upload folder if it doesn't exist
-const tempUploadDir = path.join(__dirname, "temp", "my-upload");
+const tempUploadDir = path.join(__dirname, "temp");
 if (!fs.existsSync(tempUploadDir)) {
-  fs.mkdirSync(tempUploadDir, { recursive: true });
+  fs.mkdirSync(tempUploadDir);
+  fs.chmodSync(tempUploadDir, 0o766);
 }
 
 app.listen(process.env.PORT, () => {

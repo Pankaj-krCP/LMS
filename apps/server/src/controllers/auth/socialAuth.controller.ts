@@ -38,7 +38,12 @@ export const socialAuth = catchAsyncError(
 
       const responseUser = await userModel.findOneAndUpdate(
         { _id: findUser._id },
-        { $set: { refreshToken: refreshToken, avatar: createUser?.avatar } },
+        {
+          $set: {
+            refreshToken: refreshToken,
+            avatar: { public_id: "", url: createUser?.avatar },
+          },
+        },
         { new: true, select: "-password -refreshToken" }
       );
 
