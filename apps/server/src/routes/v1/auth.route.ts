@@ -9,6 +9,7 @@ import {
   refreshToken,
   resetPassword,
   signup,
+  socialAuth,
   updatePassword,
   verifyUser,
 } from "../../controllers/auth";
@@ -21,5 +22,6 @@ authRoute.get("/refresh-token", refreshToken);
 authRoute.get("/all-logout", logout);
 authRoute.put("/reset-password", validateOtp, resetPassword);
 authRoute.put("/update-password", isLogin, updatePassword);
+authRoute.post("/social-auth", socialAuth);
 
 export default authRoute;

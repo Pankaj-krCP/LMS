@@ -6,6 +6,8 @@ import { refreshToken } from "./refreshToken.controller";
 import { logout } from "./logout.controller";
 import { resetPassword } from "./resetPassword.controller";
 import { updatePassword } from "./updatePassword.controller";
+import { socialAuth } from "./socialAuth.controller";
+import { updateUser } from "../user/updateUser.controller";
 
 export {
   generateOtp,
@@ -16,4 +18,6 @@ export {
   logout,
   resetPassword,
   updatePassword,
+  socialAuth,
+  updateUser,
 };
