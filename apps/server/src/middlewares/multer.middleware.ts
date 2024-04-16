@@ -8,7 +8,7 @@ const storage = multer.diskStorage({
     file: Express.Multer.File,
     cb: Function
   ) {
-    cb(null, path.join(__dirname, "../temp"));
+    cb(null, path.join(__dirname, "../public"));
   },
   filename: function (req: Request, file: Express.Multer.File, cb: Function) {
     const uniquesuffix = Date.now() + "-" + Math.round(Math.random() * 1e9);
