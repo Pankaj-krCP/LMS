@@ -37,6 +37,6 @@ otpSchema.methods.isOtpMatched = async function (enteredOtp: string) {
   return await bcrypt.compare(enteredOtp, this.otp);
 };
 
-const Otp = mongoose.model<IOtp>("Otp", otpSchema);
+const OtpModel = mongoose.model<IOtp>("Otp", otpSchema);
 
-export default Otp;
+export default OtpModel;

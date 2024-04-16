@@ -14,7 +14,7 @@ export interface IUser {
   };
   role: string;
   isVerified: boolean;
-  courses: [{ courseId: string }];
+  courses: [{ type: mongoose.Types.ObjectId; ref: "Course" }];
   isPasswordMatched: (password: string) => Promise<boolean>;
   refreshToken: string;
 }
@@ -54,7 +54,7 @@ const userSchema = new mongoose.Schema<IUser>(
       default: false,
     },
     courses: {
-      type: [{ courseId: String }],
+      type: [{ type: mongoose.Types.ObjectId, ref: "Course" }],
     },
     refreshToken: {
       type: String,
@@ -75,6 +75,6 @@ userSchema.methods.isPasswordMatched = async function (
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-const User = mongoose.model<IUser>("User", userSchema);
+const UserModel = mongoose.model<IUser>("User", userSchema);
 
-export default User;
+export default UserModel;
