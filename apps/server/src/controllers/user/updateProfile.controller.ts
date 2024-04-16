@@ -2,7 +2,10 @@ import fs from "fs";
 import { Response, NextFunction } from "express";
 import catchAsyncError from "../../middlewares/catchAsyncError.middleware";
 import errorHandler from "../../utils/errorHandler.helper";
-import { cloudinaryUpload } from "../../utils/cloudinary.helper";
+import {
+  cloudinaryDelete,
+  cloudinaryUpload,
+} from "../../utils/cloudinary.helper";
 import userModel from "../../models/user.modal";
 import { CustomRequest } from "../../utils/customRequest.helper";
 import { setRedisUser } from "../../utils/setRedis.helper";
@@ -16,6 +19,9 @@ export const updateProfilePicture = catchAsyncError(
         throw new errorHandler("file not uploaded", 400);
       }
       const path = file.path;
+      if (user?.avatar?.public_id) {
+        cloudinaryDelete(user?.avatar?.public_id);
+      }
       const image = await cloudinaryUpload(path);
       fs.unlinkSync(path);
 
