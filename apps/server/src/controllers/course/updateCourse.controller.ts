@@ -6,11 +6,12 @@ import errorHandler from "../../utils/errorHandler.helper";
 export const updateCourse = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     const course = req.body;
-    if (!course._id) {
+    const courseId = req.params.id;
+    if (!courseId) {
       throw new errorHandler("course id is required", 400);
     }
     const updatedCourse = await CourseModel.findByIdAndUpdate(
-      course._id,
+      courseId,
       course,
       { new: true }
     );
