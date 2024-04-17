@@ -5,15 +5,12 @@ interface ICourse extends Document {
   description: string;
   price: number;
   estimatedPrice?: number;
-  thumbnail: {
-    public_id: string;
-    url: string;
-  };
-  tags: string;
+  thumbnail: { type: mongoose.Types.ObjectId; ref: "Thumbnail" };
+  tags: [string];
   level: string;
   demoUrl: string;
-  benefits: { title: string }[];
-  prerequisites: string[];
+  benefits: [string];
+  prerequisites: [string];
   reviews: [{ type: mongoose.Types.ObjectId; ref: "Review" }];
   courseData: [{ type: mongoose.Types.ObjectId; ref: "CourseData" }];
   ratings?: number;
@@ -36,20 +33,13 @@ const courseSchema = new Schema<ICourse>({
   estimatedPrice: {
     type: Number,
   },
-  thumbnail: {
-    public_id: {
+  thumbnail: { type: mongoose.Types.ObjectId, ref: "Thumbnail" },
+  tags: [
+    {
       type: String,
       required: true,
     },
-    url: {
-      type: String,
-      required: true,
-    },
-  },
-  tags: {
-    type: String,
-    required: true,
-  },
+  ],
   level: {
     type: String,
     required: true,
@@ -58,11 +48,7 @@ const courseSchema = new Schema<ICourse>({
     type: String,
     required: true,
   },
-  benefits: [
-    {
-      title: String,
-    },
-  ],
+  benefits: [String],
   prerequisites: [String],
   reviews: [{ type: mongoose.Types.ObjectId, ref: "Review" }],
   courseData: [{ type: mongoose.Types.ObjectId, ref: "CourseData" }],
