@@ -1,6 +1,6 @@
 import mongoose, { Document, Model, Schema } from "mongoose";
 
-interface ICourse extends Document {
+export interface ICourse extends Document {
   title: string;
   description: string;
   price: number;
@@ -12,7 +12,13 @@ interface ICourse extends Document {
   benefits: [string];
   prerequisites: [string];
   reviews: [{ type: mongoose.Types.ObjectId; ref: "Review" }];
-  courseData: [{ type: mongoose.Types.ObjectId; ref: "CourseData" }];
+  sections: [
+    {
+      _id?: string;
+      title: string;
+      courseData: [{ type: mongoose.Types.ObjectId; ref: "CourseData" }];
+    },
+  ];
   ratings?: number;
   purchased?: number;
 }
@@ -51,7 +57,15 @@ const courseSchema = new Schema<ICourse>({
   benefits: [String],
   prerequisites: [String],
   reviews: [{ type: mongoose.Types.ObjectId, ref: "Review" }],
-  courseData: [{ type: mongoose.Types.ObjectId, ref: "CourseData" }],
+  sections: [
+    {
+      title: {
+        type: String,
+        required: true,
+      },
+      courseData: [{ type: mongoose.Types.ObjectId, ref: "CourseData" }],
+    },
+  ],
   ratings: {
     type: Number,
     default: 0,
@@ -62,6 +76,6 @@ const courseSchema = new Schema<ICourse>({
   },
 });
 
-const CourseModel: Model<ICourse> = mongoose.model("Course", courseSchema);
+const courseModel: Model<ICourse> = mongoose.model("Course", courseSchema);
 
-export default CourseModel;
+export default courseModel;

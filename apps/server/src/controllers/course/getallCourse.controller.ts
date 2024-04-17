@@ -6,7 +6,7 @@ import errorHandler from "../../utils/errorHandler.helper";
 export const getAllCourse = catchAsyncError(
   async (req: Request, res: Response, next: NextFunction) => {
     try {
-      const allCourse = await courseModel.find();
+      const allCourse = await courseModel.find().select("-courseData");
 
       if (!allCourse) {
         throw new errorHandler("Not able to fetched Course", 500);

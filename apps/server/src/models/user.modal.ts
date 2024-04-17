@@ -75,6 +75,6 @@ userSchema.methods.isPasswordMatched = async function (
   return await bcrypt.compare(enteredPassword, this.password);
 };
 
-const UserModel = mongoose.model<IUser>("User", userSchema);
+const userModel = mongoose.model<IUser>("User", userSchema);
 
-export default UserModel;
+export default userModel;
