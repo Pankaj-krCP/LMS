@@ -22,8 +22,10 @@ export const updateProfilePicture = catchAsyncError(
       if (user?.avatar?.public_id) {
         cloudinaryDelete(user?.avatar?.public_id);
       }
-      const image = await cloudinaryUpload(path);
-      fs.unlinkSync(path);
+      const image = await cloudinaryUpload(path, {
+        folder: "avatar",
+        width: 120,
+      });
 
       const responseUser = await userModel.findOneAndUpdate(
         { _id: user._id },
