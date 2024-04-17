@@ -12,7 +12,7 @@ export const Me = catchAsyncError(
       }
 
       res.status(200).json({
-        succes: true,
+        success: true,
         data: { user: user },
         message: "successfully fetched user",
       });

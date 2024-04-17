@@ -32,7 +32,7 @@ export const deleteProfilePicture = catchAsyncError(
       res.status(200).json({
         success: true,
         data: { user: responseUser },
-        message: "Profile updated successfully",
+        message: "Profile deleted successfully",
       });
     } catch (error) {
       return next(error);

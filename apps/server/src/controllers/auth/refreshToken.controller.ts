@@ -40,7 +40,7 @@ export const refreshToken = catchAsyncError(
       };
 
       res.status(200).cookie("accessToken", accessToken, options).json({
-        succes: true,
+        success: true,
         data: {
           accessToken,
         },

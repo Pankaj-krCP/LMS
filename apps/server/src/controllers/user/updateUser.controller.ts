@@ -21,9 +21,9 @@ export const updateUser = catchAsyncError(
       setRedisUser(findUser);
 
       res.status(200).json({
-        succes: true,
+        success: true,
         data: { user: findUser },
-        message: "User updated Succesfully",
+        message: "User updated Successfully",
       });
     } catch (error) {
       return next(error);

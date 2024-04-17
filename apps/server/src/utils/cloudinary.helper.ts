@@ -9,9 +9,7 @@ export const cloudinaryUpload = async (
     if (!localFilePath) {
       throw new Error("LocalFilePath is empty to upload image on Cloudinary");
     }
-    console.log(localFilePath);
     const response = await cloudinary.uploader.upload(localFilePath, options);
-    console.log(response);
     const result = {
       public_id: response.public_id,
       url: response.secure_url,
@@ -34,11 +32,7 @@ export const cloudinaryDelete = async (public_id: string) => {
       );
     }
     const response = await cloudinary.uploader.destroy(public_id);
-    const result = {
-      public_id: response.public_id,
-      url: response.secure_url,
-    };
-    return result;
+    return response;
   } catch (error: any) {
     throw error;
   }

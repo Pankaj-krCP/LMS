@@ -9,7 +9,7 @@ export const getAllUser = catchAsyncError(
         .find()
         .select("-refreshToken -password");
       res.status(200).json({
-        succes: true,
+        success: true,
         data: { allUser },
         message: "fetched all users",
       });
