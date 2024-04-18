@@ -4,6 +4,7 @@ import {
   addCourseSection,
   addQuestion,
   addReply,
+  addReview,
   createCourse,
   createCourseData,
   deleteCourse,
@@ -22,8 +23,9 @@ const courseRoute = express.Router();
 courseRoute.post("/create-course", isLogin, isAdmin, createCourse);
 courseRoute.get("/getall-course", getAllCourse);
 courseRoute.delete("/delete-course", isLogin, isAdmin, deleteCourse);
+courseRoute.post("/add-review/courseId/:id", isLogin, isEnroll, addReview);
 courseRoute.put("/update-course/:id", isLogin, isAdmin, updateCourse);
-courseRoute.put("/add-section/:id", isLogin, isAdmin, addCourseSection);
+courseRoute.post("/add-section/:id", isLogin, isAdmin, addCourseSection);
 courseRoute.put(
   "/update-section/:courseId/sections/:sectionId",
   isLogin,
