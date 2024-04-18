@@ -2,6 +2,8 @@ import express from "express";
 import { isAdmin, isLogin } from "../../middlewares/auth.middleware";
 import {
   addCourseSection,
+  addQuestion,
+  addReply,
   createCourse,
   createCourseData,
   deleteCourse,
@@ -11,6 +13,8 @@ import {
   updateCourse,
   updateCourseData,
   updateCourseSection,
+  updateQuestion,
+  updateReply,
 } from "../../controllers/course";
 import { isEnroll } from "../../middlewares/course.middleware";
 const courseRoute = express.Router();
@@ -33,6 +37,19 @@ courseRoute.post(
   createCourseData
 );
 courseRoute.put("/update-coursedata/:id", isLogin, isAdmin, updateCourseData);
+courseRoute.post("/add-question/courseId/:id", isLogin, isEnroll, addQuestion);
+courseRoute.put(
+  "/update-question/questionId/:questionId",
+  isLogin,
+  updateQuestion
+);
+courseRoute.post(
+  "/add-reply/courseId/:id/questionId/:questionId",
+  isLogin,
+  isEnroll,
+  addReply
+);
+courseRoute.put("/update-reply/replyId/:replyId", isLogin, updateReply);
 courseRoute.get(
   "/getsingle-enroll-course/:id",
   isLogin,
