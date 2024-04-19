@@ -5,12 +5,14 @@ import {
   addQuestion,
   addReply,
   addReview,
+  addReviewReply,
   createCourse,
   createCourseData,
   deleteCourse,
   getAllCourse,
   getSingleEnrollCourse,
   getSingleUnenrollCourse,
+  updateComment,
   updateCourse,
   updateCourseData,
   updateCourseSection,
@@ -30,6 +32,8 @@ courseRoute.put(
   isLogin,
   updateReview
 );
+courseRoute.put("/review-reply/reviewId/:reviewId", isLogin, addReviewReply);
+courseRoute.put("/update-comment/commentId/:commentId", isLogin, updateComment);
 courseRoute.put("/update-course/:id", isLogin, isAdmin, updateCourse);
 courseRoute.post("/add-section/:id", isLogin, isAdmin, addCourseSection);
 courseRoute.put(

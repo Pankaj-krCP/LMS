@@ -2,6 +2,8 @@ import { createCourse } from "./createCourse.controller";
 import { deleteCourse } from "./deleteCourse.controller";
 import { addReview } from "./addReview.controller";
 import { updateReview } from "./updateReview.controller";
+import { addReviewReply } from "./addReviewReply.controller";
+import { updateComment } from "./updateComment";
 import { getAllCourse } from "./getallCourse.controller";
 import { updateCourse } from "./updateCourse.controller";
 import { addCourseSection } from "./addCourseSection.controller";
@@ -20,6 +22,8 @@ export {
   deleteCourse,
   addReview,
   updateReview,
+  addReviewReply,
+  updateComment,
   getAllCourse,
   updateCourse,
   addCourseSection,
