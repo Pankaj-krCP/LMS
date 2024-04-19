@@ -16,6 +16,7 @@ import {
   updateCourseSection,
   updateQuestion,
   updateReply,
+  updateReview,
 } from "../../controllers/course";
 import { isEnroll } from "../../middlewares/course.middleware";
 const courseRoute = express.Router();
@@ -24,6 +25,11 @@ courseRoute.post("/create-course", isLogin, isAdmin, createCourse);
 courseRoute.get("/getall-course", getAllCourse);
 courseRoute.delete("/delete-course", isLogin, isAdmin, deleteCourse);
 courseRoute.post("/add-review/courseId/:id", isLogin, isEnroll, addReview);
+courseRoute.put(
+  "/update-review/courseId/:courseId/reviewId/:reviewId",
+  isLogin,
+  updateReview
+);
 courseRoute.put("/update-course/:id", isLogin, isAdmin, updateCourse);
 courseRoute.post("/add-section/:id", isLogin, isAdmin, addCourseSection);
 courseRoute.put(
