@@ -1,16 +1,17 @@
 import React from "react";
-import Meta from "@repo/ui/meta";
-import ClientHeader from "./_component/Header/ClientHeader";
+import Heading from "@repo/ui/heading";
 
-const page = () => {
+interface Props {}
+
+const page: React.FC<Props> = () => {
   return (
     <div>
-      <Meta
+      <Heading
         title="CodingSync"
         description="CodingSync is a platform for code to boost their knowledge"
         keywords="Programming,MERN,Next,Express,Node,React,MongoDB,Turborepo"
       />
-      <ClientHeader />
+      <h1>Hello World</h1>
     </div>
   );
 };

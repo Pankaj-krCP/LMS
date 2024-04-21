@@ -1,12 +1,12 @@
 import { FC } from "react";
 
-interface HeadProps {
+interface MetaProps {
   title: string;
   description: string;
   keywords: string;
 }
 
-const Heading: FC<HeadProps> = ({ title, description, keywords }) => {
+const Meta: FC<MetaProps> = ({ title, description, keywords }) => {
   return (
     <>
       <title>{title}</title>
@@ -17,4 +17,4 @@ const Heading: FC<HeadProps> = ({ title, description, keywords }) => {
   );
 };
 
-export default Heading;
+export default Meta;
