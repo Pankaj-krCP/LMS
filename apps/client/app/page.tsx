@@ -1,6 +1,8 @@
 import React from "react";
 import Meta from "@repo/ui/meta";
-import ClientHeader from "./_component/Header/ClientHeader";
+import ClientHeader from "./_component/home/ClientHeader";
+import ClientBody from "./_component/home/ClientBody";
+// import ClientFooter from "./_component/home/ClientFooter";
 
 const page = () => {
   return (
@@ -11,6 +13,8 @@ const page = () => {
         keywords="Programming,MERN,Next,Express,Node,React,MongoDB,Turborepo"
       />
       <ClientHeader />
+      <ClientBody />
+      {/* <ClientFooter /> */}
     </div>
   );
 };

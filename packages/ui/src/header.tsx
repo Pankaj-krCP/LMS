@@ -22,9 +22,9 @@ export const Header: FC<Props> = ({ navItemsData, auth, setAuth }) => {
   const [openSideBar, setOpenSideBar] = useState(false);
 
   return (
-    <div className="w-full relative">
+    <div className="w-full relative fixed">
       <div
-        className={`${BoxTopToBottomGradient} border-t-0 border-l-0 border-r-0 top-0 left-0 w-full h-[70px] z-[80] shadow-lg`}
+        className={`${BoxTopToBottomGradient} fixed border-t-0 border-l-0 border-r-0 top-0 left-0 w-full h-[70px] z-[80] shadow-lg`}
       >
         <div className="w-[98%]">
           <div className="h-[70px] flex items-center justify-between p-3">

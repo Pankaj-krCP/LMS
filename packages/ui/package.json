@@ -3,9 +3,10 @@
   "version": "0.0.0",
   "private": true,
   "exports": {
+    "./button": "./src/button.tsx",
     "./header": "./src/header.tsx",
     "./meta": "./src/meta.tsx",
-    "./button": "./src/button.tsx",
+    "./search-bar": "./src/search-bar.tsx",
     "./theme-provider": "./src/theme-provider.tsx"
   },
   "scripts": {

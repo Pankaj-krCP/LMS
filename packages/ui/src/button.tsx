@@ -1,20 +1,18 @@
-"use client";
+import { FC } from "react";
+import { ButtonHover } from "./utils/constant";
 
-import { ReactNode } from "react";
-
-interface ButtonProps {
-  children: ReactNode;
-  className?: string;
-  appName: string;
+interface Props {
+  title: string;
 }
 
-export const Button = ({ children, className, appName }: ButtonProps) => {
+const Button: FC<Props> = ({ title }) => {
   return (
     <button
-      className={className}
-      onClick={() => alert(`Hello from your ${appName} app!`)}
+      className={`${ButtonHover} bg-zinc-800 dark:bg-zinc-100 text-white dark:text-black py-2 px-4 rounded-full font-bold shadow-md`}
     >
-      {children}
+      {title}
     </button>
   );
 };
+
+export default Button;
