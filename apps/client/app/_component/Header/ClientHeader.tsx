@@ -1,6 +1,6 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useCallback, useEffect, useState } from "react";
 import { Header } from "@repo/ui/header";
 
 export const navItemsData = [
@@ -26,13 +26,25 @@ export const navItemsData = [
   },
 ];
 
-interface Props {}
+const ClientHeader = () => {
+  const [auth, setAuth] = useState("");
 
-const ClientHeader: React.FC<Props> = () => {
-  const [activeItem, setActiveItem] = useState(0);
+  useEffect(() => {
+    if (auth === "login") {
+      //Login logic
+      console.log("login");
+    } else if (auth === "logout") {
+      //LogOut logic
+      console.log("logout");
+    } else if (auth === "profile") {
+      //showing profile page logic
+      console.log("Show Profile");
+    }
+  }, [auth]);
+
   return (
     <div>
-      <Header navItemsData={navItemsData} activeItem={activeItem} />
+      <Header navItemsData={navItemsData} auth={auth} setAuth={setAuth} />
     </div>
   );
 };

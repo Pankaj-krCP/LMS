@@ -1,7 +1,6 @@
 import "./globals.css";
 import { Poppins, Josefin_Sans } from "next/font/google";
 import { ThemeProvider } from "@repo/ui/theme-provider";
-import { ThemeSwitcher } from "../../../packages/ui/src/component/header/ThemeSwitcher";
 
 const poppins = Poppins({
   subsets: ["latin"],

@@ -6,18 +6,20 @@ import { HiOutlineMenuAlt3 } from "react-icons/hi";
 import { ImCancelCircle } from "react-icons/im";
 import NavItems from "./component/header/NavItems";
 import Logo from "./component/header/Logo";
+import Profile from "./component/header/Profile";
+import { AbsoluteBox } from "./utils/constant";
 
 export interface NavItemsProps {
   name: string;
   url: string;
 }
-
-export interface Props {
+interface Props {
   navItemsData: NavItemsProps[];
-  activeItem: number;
+  auth: string;
+  setAuth: Function;
 }
 
-export const Header: FC<Props> = ({ navItemsData, activeItem }) => {
+export const Header: FC<Props> = ({ navItemsData, auth, setAuth }) => {
   const [openSideBar, setOpenSideBar] = useState(false);
 
   return (
@@ -30,28 +32,28 @@ export const Header: FC<Props> = ({ navItemsData, activeItem }) => {
             <Logo />
             <div className="flex">
               <div className="hidden 800px:flex">
-                <NavItems navItemsData={navItemsData} activeItem={activeItem} />
+                <NavItems navItemsData={navItemsData} />
               </div>
               <ThemeSwitcher />
+              <Profile auth={auth} setAuth={setAuth} />
               <div className="800px:hidden">
                 <HiOutlineMenuAlt3
-                  className="cursor-pointer ml-4"
+                  className="cursor-pointer ml-6"
                   size={24}
                   onClick={() => setOpenSideBar(true)}
                 />
                 {openSideBar && (
-                  <div className="absolute rounded-bl-lg border-b border-l dark:border-gray-600 border-gray-300 right-0 top-0 bg-zinc-100 dark:bg-zinc-700 w-[60%] p-1">
-                    <div className="flex justify-end w-full border-b border-gray-500 p-5">
+                  <div
+                    className={`${AbsoluteBox} right-0 top-0 rounded-tl-none rounded-tr-none rounded-br-none`}
+                  >
+                    <div className="flex justify-end w-full border-b border-gray-500 py-5 pr-4">
                       <ImCancelCircle
-                        className="cursor-pointer ml-4"
+                        className="cursor-pointer"
                         size={24}
                         onClick={() => setOpenSideBar(false)}
                       />
                     </div>
-                    <NavItems
-                      navItemsData={navItemsData}
-                      activeItem={activeItem}
-                    />
+                    <NavItems navItemsData={navItemsData} />
                   </div>
                 )}
               </div>

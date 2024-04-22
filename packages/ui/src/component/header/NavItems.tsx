@@ -1,14 +1,23 @@
-import { FC } from "react";
+import { FC, useState } from "react";
 import Link from "next/link";
-import { Props } from "../../header";
+import { NavItemsProps } from "../../header";
+import { ButtonHover } from "../../utils/constant";
 
-const NavItems: FC<Props> = ({ navItemsData, activeItem }) => {
+interface Props {
+  navItemsData: NavItemsProps[];
+}
+
+const NavItems: FC<Props> = ({ navItemsData }) => {
+  const [activeItem, setActiveItem] = useState(0);
   return (
     <>
       {navItemsData &&
         navItemsData.map((item, index) => (
-          <div key={index} className="p-4 800px:p-0 800px:mx-1">
-            <Link href={item.url}>
+          <div
+            key={index}
+            className={`${index === 0 ? "mt-1 800px:mt-0" : ""} p-4 800px:p-0 800px:mx-1 rounded ${ButtonHover}`}
+          >
+            <Link href={item.url} onClick={() => setActiveItem(index)}>
               <span
                 className={`${
                   activeItem === index
