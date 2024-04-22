@@ -1,13 +1,24 @@
-const SearchBar = () => {
+import { FC } from "react";
+
+interface Props {
+  className: string;
+  search: string;
+  setSearch: Function;
+}
+
+const SearchBar: FC<Props> = ({ className, search, setSearch }) => {
   return (
-    <>
+    <div>
       <input
         type="text"
         placeholder="Search here"
-        value={""}
-        className="p-4 w-[50%] border rounded-lg dark:border-gray-600 shadow-lg mt-10 outline-none focus:ring-2 focus:ring-blue-500"
+        value={search}
+        onChange={(e) => {
+          setSearch(e.target.value);
+        }}
+        className={`${className} border rounded-lg dark:border-gray-600 dark:bg-gray-900 shadow-lg outline-none focus:ring-1 focus:ring-blue-200`}
       />
-    </>
+    </div>
   );
 };
 

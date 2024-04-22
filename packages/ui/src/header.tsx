@@ -51,15 +51,8 @@ export const Header: FC<Props> = ({ navItemsData, auth, setAuth }) => {
                 )}
                 {openSideBar && (
                   <div
-                    className={`${AbsoluteBox} z-[-1] right-0 top-[100%] border-t-0 rounded-tl-none rounded-tr-none rounded-br-none`}
+                    className={`${AbsoluteBox} z-[-1] right-0 top-[100%] border-r-0 rounded-tl-none rounded-tr-none rounded-br-none`}
                   >
-                    {/* <div className="flex justify-end w-full border-b border-gray-500 py-5 pr-4">
-                      <ImCancelCircle
-                        className="cursor-pointer"
-                        size={24}
-                        onClick={() => setOpenSideBar(false)}
-                      />
-                    </div> */}
                     <NavItems navItemsData={navItemsData} />
                   </div>
                 )}
