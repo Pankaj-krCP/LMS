@@ -1,6 +1,8 @@
 import "./globals.css";
 import { Poppins, Josefin_Sans } from "next/font/google";
 import { ThemeProvider } from "@repo/ui/theme-provider";
+import ClientHeader from "./_component/home/Header";
+import ClientFooter from "./_component/home/Footer";
 
 const poppins = Poppins({
   subsets: ["latin"],
@@ -26,7 +28,13 @@ export default function RootLayout({
         className="dark:bg-gray-950 duration-300"
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <header>
+            <ClientHeader />
+          </header>
           {children}
+          <footer>
+            <ClientFooter />
+          </footer>
         </ThemeProvider>
       </body>
     </html>

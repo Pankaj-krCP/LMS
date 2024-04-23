@@ -1,4 +1,5 @@
 import { FC } from "react";
+import { FaSearch } from "react-icons/fa";
 
 interface Props {
   className: string;
@@ -8,7 +9,7 @@ interface Props {
 
 const SearchBar: FC<Props> = ({ className, search, setSearch }) => {
   return (
-    <div>
+    <div className="relative">
       <input
         type="text"
         placeholder="Search here"
@@ -16,8 +17,11 @@ const SearchBar: FC<Props> = ({ className, search, setSearch }) => {
         onChange={(e) => {
           setSearch(e.target.value);
         }}
-        className={`${className} border rounded-lg dark:border-gray-600 dark:bg-gray-900 shadow-lg outline-none focus:ring-1 focus:ring-blue-200`}
+        className={`${className} pr-10 border rounded-lg dark:border-gray-600 dark:bg-gray-900 shadow-lg outline-none focus:ring-1 focus:ring-blue-200`}
       />
+      <div className="absolute right-3 top-3">
+        <FaSearch fill="gray" className="h-5 w-5" />
+      </div>
     </div>
   );
 };

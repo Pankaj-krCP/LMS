@@ -3,7 +3,7 @@ import Image from "next/image";
 
 const CourseCard = () => {
   return (
-    <div className="bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-[100%] 800px:w-[30%]">
+    <div className="cursor-pointer bg-gray-100 dark:bg-gray-900 rounded-lg shadow-lg overflow-hidden w-[100%] 800px:w-[30%]">
       <Image
         width={20}
         height={20}
@@ -11,16 +11,18 @@ const CourseCard = () => {
         alt="Course Image"
         className="w-full h-48 object-cover"
       />
-      <div className="p-4">
-        <h3 className="text-xl font-bold">Course Title</h3>
-        <p className="mt-1">
+      <div className="p-4 border border-t-0 border-gray-200 dark:border-gray-600">
+        <h3 className="text-xl font-bold text-gray-500">Course Title</h3>
+        <p className="mt-2 text-gray-400">
           Lorem ipsum dolor sit amet, consectetur adipiscing elit.
         </p>
-        <div className="mt-1 flex justify-between items-center">
-          <p className="text-lg font-bold">$49.99</p>
-          <button className="px-4 py-2 bg-blue-500 hover:bg-blue-600 text-white rounded-lg">
-            Enroll Now
-          </button>
+        <div className="mt-2 flex justify-between items-center">
+          <div className="flex items-center">
+            <span className="bg-blue-500 rounded-full items-center justify-center text-white font-bold text-sm p-1">
+              4.8
+            </span>
+          </div>
+          <p className="text-lg font-bold text-green-600">$49.99</p>
         </div>
       </div>
     </div>

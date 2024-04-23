@@ -1,8 +1,6 @@
 import React from "react";
 import Meta from "@repo/ui/meta";
-import ClientHeader from "./_component/home/ClientHeader";
-import ClientBody from "./_component/home/ClientBody";
-// import ClientFooter from "./_component/home/ClientFooter";
+import ClientBody from "./_component/home/Body";
 
 const page = () => {
   return (
@@ -12,9 +10,7 @@ const page = () => {
         description="CodingSync is a platform for code to boost their knowledge"
         keywords="Programming,MERN,Next,Express,Node,React,MongoDB,Turborepo"
       />
-      <ClientHeader />
       <ClientBody />
-      {/* <ClientFooter /> */}
     </div>
   );
 };

@@ -1,7 +1,6 @@
 import { FC, useState } from "react";
 import { AiOutlineLogin } from "react-icons/ai";
 import { FaUserCircle } from "react-icons/fa";
-import { ImCancelCircle } from "react-icons/im";
 import { AbsoluteBox, ButtonHover } from "../../utils/constant";
 
 interface Props {
@@ -32,18 +31,18 @@ const Profile: FC<Props> = ({ auth, setAuth }) => {
           className={`${AbsoluteBox} top-[100%] mt-1 right-16 800px:right-10`}
         >
           <div
-            className={`cursor-pointer rounded p-4 mt-1 ${ButtonHover}`}
+            className={`cursor-pointer rounded p-2 mt-1 ${ButtonHover}`}
             onClick={() => setAuth("profile")}
           >
-            <span className={`py-3 text-[18px] px-6 font-Poppins font-[400]`}>
+            <span className={`py-2 text-[18px] px-6 font-Poppins font-[400]`}>
               Profile
             </span>
           </div>
           <div
-            className={`cursor-pointer rounded p-4 ${ButtonHover}`}
+            className={`cursor-pointer rounded p-2 ${ButtonHover}`}
             onClick={() => setAuth("logout")}
           >
-            <span className={`py-3 text-[18px] px-6 font-Poppins font-[400]`}>
+            <span className={`py-2 text-[18px] px-6 font-Poppins font-[400]`}>
               Log Out
             </span>
           </div>
