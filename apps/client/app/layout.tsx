@@ -25,7 +25,7 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ fontFamily: `${poppins.variable}, ${josefin.variable}` }}
-        className="dark:bg-gray-950 duration-300"
+        className="dark:bg-gray-900 duration-300"
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header>

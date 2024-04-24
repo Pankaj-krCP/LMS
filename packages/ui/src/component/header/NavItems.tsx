@@ -2,6 +2,7 @@ import { FC, useState } from "react";
 import Link from "next/link";
 import { NavItemsProps } from "../../header";
 import { ButtonHover } from "../../utils/constant";
+import { UnderLine } from "../../utils/constant";
 
 interface Props {
   navItemsData: NavItemsProps[];
@@ -21,9 +22,9 @@ const NavItems: FC<Props> = ({ navItemsData }) => {
               <span
                 className={`${
                   activeItem === index
-                    ? "text-[crimson] dark:text-[#37a39a]"
+                    ? `text-[crimson] dark:text-[#37a39a] ${UnderLine}`
                     : ""
-                } py-3 text-[18px] px-6 font-Poppins font-[400] `}
+                } py-3 text-[18px] px-4 font-Poppins font-[400]`}
               >
                 {item.name}
               </span>

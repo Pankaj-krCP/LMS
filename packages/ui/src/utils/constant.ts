@@ -6,3 +6,6 @@ export const AbsoluteBox =
 
 export const BoxTopToBottomGradient =
   "border border-gray-300 dark:border-gray-600 bg-gradient-to-b from-white via-gray-50 to-gray-100 dark:from-gray-800 dark:via-gray-900 dark:to-gray-950";
+
+export const UnderLine =
+  "underline underline-offset-4 decoration-2 decoration-green-500 rounded";

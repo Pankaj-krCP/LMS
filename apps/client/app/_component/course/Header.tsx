@@ -8,7 +8,7 @@ const Header = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="fixed w-full pb-[10px] pt-[70px] flex gap-5 items-center justify-center bg-gray-100 dark:bg-gray-900 border-b dark:border-gray-600">
+    <div className="fixed w-full pb-[10px] pt-[70px] flex gap-5 items-center justify-center bg-white dark:bg-gray-900 border-b dark:border-gray-600">
       <div className="text-end w-[60%] 800px:w-[65%]">
         <SearchBar
           className="p-2 w-[75%]"
