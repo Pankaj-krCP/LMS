@@ -10,21 +10,21 @@ export const navItemsData = [
   },
   {
     name: "Courses",
-    url: "course",
+    url: "/course",
   },
-  { name: "My Learning", url: "my-learning" },
-  { name: "Articles", url: "article" },
+  { name: "My Learning", url: "/my-learning" },
+  { name: "Articles", url: "/article" },
   {
     name: "About",
-    url: "about",
+    url: "/about",
   },
   {
     name: "Policy",
-    url: "policy",
+    url: "/policy",
   },
   {
     name: "FAQ",
-    url: "faq",
+    url: "/faq",
   },
 ];
 

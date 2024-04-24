@@ -1,9 +1,9 @@
 import React from "react";
-import Body from "../../_component/course/Body";
+import Body from "../../../_component/course/Body";
 
 const page = () => {
   return (
-    <div className="pt-[130px]">
+    <div>
       <Body />
     </div>
   );

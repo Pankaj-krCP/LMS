@@ -1,13 +1,13 @@
 import React from "react";
-import Header from "../../_component/course/Header";
+import Header from "../../../_component/course/SearchLayout";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <header>
+      <header className="pt-[60px]">
         <Header />
       </header>
-      {children}
+      <div className="pt-[40px]">{children}</div>
     </>
   );
 };
