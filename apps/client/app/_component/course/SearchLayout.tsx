@@ -9,7 +9,7 @@ const SearchLayout = () => {
   const [search, setSearch] = useState("");
 
   return (
-    <div className="fixed w-full py-[8px] flex gap-5 items-center justify-center bg-white dark:bg-gray-900 border-b dark:border-gray-600">
+    <div className="fixed w-full py-[6px] flex gap-5 items-center justify-center bg-white dark:bg-gray-900 border-b dark:border-gray-600">
       <div className="text-end w-[60%] 800px:w-[65%]">
         <SearchBar
           className="p-2 w-[75%]"
@@ -22,7 +22,7 @@ const SearchLayout = () => {
         <Link href={"my-learning"}>
           <Button
             title="My Learning"
-            className="bg-gray-50 dark:bg-gray-900 border dark:border-gray-600 p-2"
+            className="dark:text-gray-400 hover:dark:text-white bg-gray-50 dark:bg-gray-900 border dark:border-gray-600 p-2"
           />
         </Link>
       </div>

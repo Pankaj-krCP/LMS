@@ -1,10 +1,84 @@
+import Link from "next/link";
+import { FaFacebookF, FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
+
 const ClientFooter = () => {
   return (
-    <footer className="bg-gray-100 dark:bg-gray-900 py-4 w-full mt-10 border-t dark:border-gray-600">
-      <div className="container mx-auto text-center">
-        <p>&copy; 2024 CodingSync. All rights reserved.</p>
+    <div className="bg-gray-50 border-t shadow dark:bg-gray-900 dark:border-gray-600">
+      <div className="w-full max-w-screen-xl mx-auto p-6">
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <Link
+            href="#"
+            className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
+          >
+            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+              CodingSync
+            </span>
+          </Link>
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+            <li>
+              <Link href="#" className="hover:underline me-4 md:me-6">
+                About
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline me-4 md:me-6">
+                Privacy Policy
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline me-4 md:me-6">
+                Licensing
+              </Link>
+            </li>
+            <li>
+              <Link href="#" className="hover:underline">
+                Contact
+              </Link>
+            </li>
+          </ul>
+        </div>
+        <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-6" />
+        <div className="sm:flex sm:items-center sm:justify-between">
+          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+            © 2024{" "}
+            <Link href="#" className="hover:underline">
+              CodingSync™
+            </Link>
+            . All Rights Reserved.
+          </span>
+          <div className="flex mt-4 sm:justify-center sm:mt-0">
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white"
+            >
+              <FaFacebookF />
+              <span className="sr-only">Facebook page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <FaDiscord />
+              <span className="sr-only">Discord community</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <FaTwitter />
+              <span className="sr-only">Twitter page</span>
+            </a>
+            <a
+              href="#"
+              className="text-gray-500 hover:text-gray-900 dark:hover:text-white ms-5"
+            >
+              <FaGithub />
+              <span className="sr-only">GitHub account</span>
+            </a>
+          </div>
+        </div>
       </div>
-    </footer>
+    </div>
   );
 };
 

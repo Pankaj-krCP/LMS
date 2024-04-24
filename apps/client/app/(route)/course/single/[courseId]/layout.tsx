@@ -4,10 +4,10 @@ import SingleCourseLayout from "../../../../_component/course/SingleCourseLayout
 const layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <>
-      <header className="pt-[60px]">
+      <header className="pt-[50px]">
         <SingleCourseLayout />
       </header>
-      <div className="">{children}</div>
+      <div className="pt-[40px]">{children}</div>
     </>
   );
 };

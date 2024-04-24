@@ -15,14 +15,6 @@ export const navItemsData = [
   { name: "My Learning", url: "/my-learning" },
   { name: "Articles", url: "/article" },
   {
-    name: "About",
-    url: "/about",
-  },
-  {
-    name: "Policy",
-    url: "/policy",
-  },
-  {
     name: "FAQ",
     url: "/faq",
   },

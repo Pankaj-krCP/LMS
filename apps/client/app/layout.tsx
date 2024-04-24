@@ -25,14 +25,14 @@ export default function RootLayout({
     <html lang="en">
       <body
         style={{ fontFamily: `${poppins.variable}, ${josefin.variable}` }}
-        className="dark:bg-gray-900 duration-300"
+        className="relative dark:bg-gray-900 duration-300 min-h-[100vh]"
       >
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header>
             <ClientHeader />
           </header>
           {children}
-          <footer>
+          <footer className="absolute w-full -bottom-60">
             <ClientFooter />
           </footer>
         </ThemeProvider>

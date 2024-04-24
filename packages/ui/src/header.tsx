@@ -6,7 +6,7 @@ import { HiOutlineMenuAlt2, HiOutlineMenuAlt3 } from "react-icons/hi";
 import NavItems from "./component/header/NavItems";
 import Logo from "./component/header/Logo";
 import Profile from "./component/header/Profile";
-import { AbsoluteBox, BoxTopToBottomGradient } from "./utils/constant";
+import { AbsoluteBox } from "./utils/constant";
 
 export interface NavItemsProps {
   name: string;
@@ -24,10 +24,10 @@ export const Header: FC<Props> = ({ navItemsData, auth, setAuth }) => {
   return (
     <div className="w-full relative fixed">
       <div
-        className={`${BoxTopToBottomGradient} fixed border-t-0 border-l-0 border-r-0 top-0 left-0 w-full h-[60px] z-[80]`}
+        className={`fixed bg-white dark:bg-gray-900 border-b dark:border-gray-600 top-0 left-0 w-full h-[50px] z-[80]`}
       >
         <div className="w-[98%]">
-          <div className="h-[60px] flex items-center justify-between p-3">
+          <div className="h-[50px] flex items-center justify-between p-3">
             <Logo />
             <div className="flex items-center">
               <div className="hidden 800px:flex">
