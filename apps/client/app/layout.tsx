@@ -31,8 +31,9 @@ export default function RootLayout({
           <header>
             <ClientHeader />
           </header>
-          {children}
-          <footer className="absolute w-full -bottom-60">
+          <div>{children}</div>
+
+          <footer className="absolute w-full bg-white dark:bg-gray-900 -bottom-50">
             <ClientFooter />
           </footer>
         </ThemeProvider>

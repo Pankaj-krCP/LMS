@@ -5,7 +5,7 @@ import Banner from "./Banner";
 
 const ClientBody = () => {
   return (
-    <div className="pt-[80px]">
+    <div className="pt-[80px] pb-8">
       <Banner />
       <FeaturedCourse />
       <NavigateButton />

@@ -7,7 +7,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       <header className="pt-[50px]">
         <SingleCourseLayout />
       </header>
-      <div className="pt-[40px]">{children}</div>
+      <div className="pt-[50px]">{children}</div>
     </>
   );
 };

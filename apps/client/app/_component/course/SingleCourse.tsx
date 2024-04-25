@@ -55,7 +55,7 @@ const SingleCoursePage = () => {
   };
 
   return (
-    <div className="container mx-auto px-4 py-8">
+    <div className="container mx-auto px-4 p-8">
       <div className="flex text-center items-center justify-center">
         <div>
           <div className="mb-4">
