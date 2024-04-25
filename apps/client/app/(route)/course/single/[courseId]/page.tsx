@@ -1,10 +1,10 @@
 import React from "react";
-import SingleCoursePage from "../../../../_component/course/SingleCourse";
+import SingleCourseBody from "../../../../_component/course/SingleCourseBody";
 
 const page = () => {
   return (
     <div>
-      <SingleCoursePage />
+      <SingleCourseBody />
     </div>
   );
 };

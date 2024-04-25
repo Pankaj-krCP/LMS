@@ -17,7 +17,7 @@ export default function RootLayout({
           </header>
           <div>{children}</div>
 
-          <footer className="absolute w-full bg-white dark:bg-gray-900 -bottom-50">
+          <footer className="absolute w-full bg-white dark:bg-gray-900 -bottom-40">
             <ClientFooter />
           </footer>
         </ThemeProvider>
