@@ -10,11 +10,11 @@ const ClientFooter = () => {
             href="#"
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
-            <span className="self-center text-2xl font-semibold whitespace-nowrap dark:text-white">
+            <span className="self-center text-2xl font-semibold whitespace-nowrap">
               CodingSync
             </span>
           </Link>
-          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0 dark:text-gray-400">
+          <ul className="flex flex-wrap items-center mb-6 text-sm font-medium text-gray-500 sm:mb-0">
             <li>
               <Link href="#" className="hover:underline me-4 md:me-6">
                 About
@@ -39,7 +39,7 @@ const ClientFooter = () => {
         </div>
         <hr className="my-2 border-gray-200 sm:mx-auto dark:border-gray-700 lg:my-6" />
         <div className="sm:flex sm:items-center sm:justify-between">
-          <span className="text-sm text-gray-500 sm:text-center dark:text-gray-400">
+          <span className="text-sm text-gray-500 sm:text-center">
             © 2024{" "}
             <Link href="#" className="hover:underline">
               CodingSync™

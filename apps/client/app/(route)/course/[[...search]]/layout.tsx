@@ -3,7 +3,7 @@ import Header from "../../../_component/course/SearchLayout";
 import SideLayout from "../../../_component/course/SideLayout";
 
 const layout = ({ children }: { children: React.ReactNode }) => {
-  const openSideBar = true;
+  const openSideBar = false;
   return (
     <>
       <header className="pt-[50px]">
@@ -11,9 +11,9 @@ const layout = ({ children }: { children: React.ReactNode }) => {
       </header>
       <div className="flex pt-[50px]">
         <div
-          className={`hidden 800px:block w-[25%] border-r dark:border-gray-600`}
+          className={`hidden 800px:block w-[25%] 1100px:w-[20%] border-r dark:border-gray-600`}
         >
-          <div className="fixed top-[100px] bottom-0 w-[25%] overflow-y-auto ">
+          <div className="fixed top-[100px] bottom-0 w-[25%] 1100px:w-[20%] overflow-y-auto ">
             <SideLayout />
           </div>
         </div>
@@ -24,7 +24,7 @@ const layout = ({ children }: { children: React.ReactNode }) => {
             </div>
           </div>
         )}
-        <div className="800px:w-[75%] p-8">
+        <div className="800px:w-[75%] 1100px:w-[80%] p-8">
           <div>{children}</div>
         </div>
       </div>

@@ -3,7 +3,7 @@ import CourseCard from "../../_component/common/CourseCard";
 
 const Body = () => {
   return (
-    <div className="flex gap-5 items-center justify-between flex-wrap">
+    <div className="flex gap-10 items-center justify-around flex-wrap">
       <CourseCard />
       <CourseCard />
       <CourseCard />

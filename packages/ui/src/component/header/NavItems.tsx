@@ -31,7 +31,7 @@ const NavItems: FC<Props> = ({ navItemsData }) => {
                 className={`${
                   activeItem === (item.url.slice(1) || "/")
                     ? `text-[crimson] dark:text-[#37a39a] ${UnderLine}`
-                    : "dark:text-gray-400"
+                    : ""
                 } px-4 py-3 text-[18px] font-Poppins font-[400]`}
               >
                 {item.name}

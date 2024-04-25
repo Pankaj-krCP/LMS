@@ -13,8 +13,8 @@ const SearchLayout = () => {
 
   return (
     <div className="fixed w-full py-[6px] flex gap-2 items-center justify-around bg-white dark:bg-gray-900 border-b dark:border-gray-600 z-[50]">
-      <div className="w-[25%] flex justify-center items-center gap-2">
-        <div className="font-bold">
+      <div className="w-[25%] 1100px:w-[20%] flex justify-center items-center gap-2 ">
+        <div className="font-bold ">
           <span>Filter</span>
         </div>
         <div className="hidden 800px:block">
@@ -37,7 +37,7 @@ const SearchLayout = () => {
         <Link href={"my-learning"}>
           <Button
             title="My Learning"
-            className="dark:text-gray-400 hover:dark:text-white bg-gray-50 dark:bg-gray-900 border dark:border-gray-600 p-2"
+            className=" hover:dark:text-white bg-gray-50 dark:bg-gray-900 border dark:border-gray-600 p-2"
           />
         </Link>
       </div>

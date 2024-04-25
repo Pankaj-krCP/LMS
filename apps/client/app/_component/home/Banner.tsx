@@ -6,13 +6,13 @@ const Banner = () => {
   return (
     <div className="flex relative items-center justify-center h-[65vh]">
       <div className="absolute text-center">
-        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight text-gray-900 md:text-5xl lg:text-6xl dark:text-white">
+        <h1 className="mb-4 text-4xl font-extrabold leading-none tracking-tight md:text-5xl lg:text-6xl text-gray-800 dark:text-gray-200">
           Empowering{" "}
           <span className="text-transparent bg-clip-text bg-gradient-to-r from-sky-400 to-emerald-600 underline underline-offset-3 decoration-8 decoration-blue-400 dark:decoration-blue-600">
             Software Developers
           </span>
         </h1>
-        <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 dark:text-gray-400">
+        <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">
           We focus on providing courses and resources to help software
           developers unlock their full potential and drive innovation in the
           tech industry.

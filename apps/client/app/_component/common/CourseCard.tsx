@@ -5,18 +5,18 @@ import { testThumbnail } from "../../_utils/constant";
 
 const CourseCard = () => {
   return (
-    <div className="cursor-pointer rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 overflow-hidden w-[100%] 800px:w-[30%]">
+    <div className="cursor-pointer rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 overflow-hidden h-80 w-64">
       <Link href={"course/single/jhjwfjhwbhje"}>
         <Image
-          width={20}
-          height={20}
+          width={10}
+          height={10}
           src={testThumbnail}
           alt="Course Image"
-          className="w-full h-48 object-fit"
+          className="w-full h-40 object-fit"
         />
         <div className="p-4">
-          <h3 className="text-xl font-bold text-gray-500">Course Title</h3>
-          <p className="mt-2 text-gray-400">
+          <h3 className="text-xl font-bold ">Course Title</h3>
+          <p className="mt-2 ">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit.
           </p>
           <div className="mt-2 flex justify-between items-center">
