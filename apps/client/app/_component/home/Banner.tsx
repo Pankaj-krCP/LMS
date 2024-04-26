@@ -12,7 +12,7 @@ const Banner = () => {
             Software Developers
           </span>
         </h1>
-        <p className="mb-6 text-lg font-normal text-gray-500 lg:text-xl sm:px-16 xl:px-48 ">
+        <p className="mb-6 text-lg font-normal lg:text-xl sm:px-16 xl:px-48 ">
           We focus on providing courses and resources to help software
           developers unlock their full potential and drive innovation in the
           tech industry.
