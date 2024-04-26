@@ -12,7 +12,7 @@ const SearchLayout = () => {
   const [openSideBar, setOpenSideBar] = useState(true);
 
   return (
-    <div className="fixed w-full py-[6px] flex gap-2 items-center justify-around bg-white dark:bg-gray-900 border-b dark:border-gray-600 z-[50]">
+    <div className="fixed w-full py-[6px] flex gap-2 items-center justify-around bg-white dark:bg-slate-900 border-b dark:border-gray-600 z-[50]">
       <div className="w-[25%] 1100px:w-[20%] flex justify-center items-center gap-2 ">
         <div className="font-bold ">
           <span>Filter</span>
@@ -37,7 +37,7 @@ const SearchLayout = () => {
         <Link href={"my-learning"}>
           <Button
             title="My Learning"
-            className=" hover:dark:text-white bg-gray-50 dark:bg-gray-900 border dark:border-gray-600 p-2"
+            className=" hover:dark:text-white bg-gray-50 dark:bg-slate-900 border dark:border-gray-600 p-2"
           />
         </Link>
       </div>

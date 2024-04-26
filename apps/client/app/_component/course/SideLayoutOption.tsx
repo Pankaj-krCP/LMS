@@ -28,10 +28,12 @@ const SideLayoutOption: FC<Props> = ({ title, options }) => {
   }, [options, isOptionSelected]);
 
   const checkedAllOptions = () => {
-    if (selectedOptions === memoizedOptions.length) {
+    if (selectedOptions === memoizedOptions.length || isOpen) {
+      setIsOpen(false);
       setSelectedOptions(0);
       setIsOptionSelected({});
     } else {
+      setIsOpen(true);
       setSelectedOptions(memoizedOptions.length);
       const newIsOptionSelected: { [key: string]: boolean } = {};
       memoizedOptions.forEach((option) => {
@@ -55,20 +57,19 @@ const SideLayoutOption: FC<Props> = ({ title, options }) => {
 
   console.log(memoizedIsOptionSelected);
   return (
-    <div className="p-4 mx-2 mt-4 border dark:border-gray-600 rounded-xl ">
-      <div className="flex gap-2 items-center justify-start mb-2">
+    <div
+      className={`${isOpen ? "bg-blue-500  text-white font-medium" : ""} p-4 mx-2 mt-4 border dark:border-gray-600 rounded-xl`}
+    >
+      <div
+        className="flex gap-2 items-center justify-start mb-2"
+        onClick={() => checkedAllOptions()}
+      >
         <input
           type="checkbox"
           id={title}
           checked={selectedOptions === memoizedOptions.length}
-          onChange={() => checkedAllOptions()}
         />
-        <div
-          className="flex gap-2 items-center justify-start cursor-pointer"
-          onClick={() => {
-            setIsOpen(!isOpen);
-          }}
-        >
+        <div className="flex gap-2 items-center justify-start cursor-pointer">
           <div className="font-semibold">{title}</div>
           <div>
             {isOpen ? (

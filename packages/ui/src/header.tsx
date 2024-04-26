@@ -24,7 +24,7 @@ export const Header: FC<Props> = ({ navItemsData, auth, setAuth }) => {
   return (
     <div className="w-full relative fixed">
       <div
-        className={`fixed bg-white dark:bg-gray-900 border-b dark:border-gray-600 top-0 left-0 w-full h-[50px] z-[80]`}
+        className={`fixed bg-white dark:bg-slate-900 border-b dark:border-gray-600 top-0 left-0 w-full h-[50px] z-[80]`}
       >
         <div className="w-[98%]">
           <div className="h-[50px] flex items-center justify-between p-3">

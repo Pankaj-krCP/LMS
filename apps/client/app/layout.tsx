@@ -10,14 +10,14 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="relative dark:bg-gray-900 dark:text-gray-400 text-gray-600 duration-300 min-h-[100vh]">
+      <body className="relative bg-gray-100 dark:bg-gray-900 dark:text-gray-400 text-gray-600 duration-300 min-h-[100vh]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <header>
             <ClientHeader />
           </header>
           <div>{children}</div>
 
-          <footer className="absolute w-full bg-white dark:bg-gray-900 -bottom-40">
+          <footer className="absolute w-full bg-white dark:bg-slate-900 -bottom-36">
             <ClientFooter />
           </footer>
         </ThemeProvider>

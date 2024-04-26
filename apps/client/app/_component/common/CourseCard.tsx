@@ -5,7 +5,7 @@ import { testThumbnail } from "../../_utils/constant";
 
 const CourseCard = () => {
   return (
-    <div className="cursor-pointer rounded-lg shadow-lg border border-gray-200 dark:border-gray-600 overflow-hidden w-64">
+    <div className="cursor-pointer rounded-lg shadow-lg border bg-white dark:bg-slate-900 border-gray-200 dark:border-gray-600 overflow-hidden w-64">
       <Link href={"course/single/jhjwfjhwbhje"}>
         <Image
           width={10}

@@ -13,7 +13,7 @@ const SearchLayout = () => {
   };
 
   return (
-    <div className="fixed gap-2 w-full py-[6px] flex items-center justify-around bg-white dark:bg-gray-900 border-b dark:border-gray-600">
+    <div className="fixed gap-2 w-full py-[6px] flex items-center justify-around bg-white dark:bg-slate-900 border-b dark:border-gray-600">
       <div onClick={goBack} className="flex items-center gap-2 cursor-pointer">
         <FaArrowLeft />
         <p className="font-bold">Back</p>

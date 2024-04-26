@@ -27,7 +27,7 @@ const SingleCourseBodyRight = () => {
 
   return (
     <div className="flex-col text-center">
-      <div className="m-4 p-3 inline-block border dark:border-gray-600 rounded-full shadow-xl">
+      <div className="m-4 p-3 inline-block border bg-white dark:bg-slate-900 dark:border-gray-600 rounded-full shadow-xl">
         {courseDeatailsTabData.map((tab) => (
           <button
             key={tab.key}
