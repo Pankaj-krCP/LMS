@@ -16,7 +16,6 @@ const NavItems: FC<Props> = ({ navItemsData }) => {
   useMemo(() => {
     setActiveItem(pathname.split("/")[1] || "/");
   }, [pathname]);
-  console.log(activeItem);
 
   return (
     <>

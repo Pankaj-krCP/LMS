@@ -55,7 +55,6 @@ const SideLayoutOption: FC<Props> = ({ title, options }) => {
     setSelectedOptions(count);
   };
 
-  console.log(memoizedIsOptionSelected);
   return (
     <div
       className={`${isOpen ? "bg-blue-500  text-white font-medium" : ""} p-4 mx-2 mt-4 border dark:border-gray-600 rounded-xl`}

@@ -21,7 +21,7 @@ const Certificate = () => {
   ];
 
   const handleDownload = (certificateId: number) => {
-    console.log(certificateId);
+    console.log("certificateid", certificateId);
   };
 
   return (

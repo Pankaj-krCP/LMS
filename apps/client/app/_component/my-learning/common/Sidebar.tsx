@@ -2,6 +2,7 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 
 const navigation = [
   { title: "Dashboard", url: "/my-learning" },
@@ -12,8 +13,13 @@ const navigation = [
 
 const Sidebar = () => {
   const [selectedOption, setSelectedOption] = useState<string>("Dashboard");
+  const pathname = usePathname();
+  const paths = pathname.split("/");
+
   return (
-    <div>
+    <div
+      className={`${paths[2] === "study" && paths.length > 3 ? "hidden" : ""}`}
+    >
       {navigation.map((item, index) => {
         return (
           <div
