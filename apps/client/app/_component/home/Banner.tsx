@@ -1,6 +1,6 @@
 import React from "react";
-import Link from "next/link";
 import { FaArrowDown } from "react-icons/fa";
+import LinkButton from "@repo/ui/linkButton";
 
 const Banner = () => {
   return (
@@ -17,27 +17,8 @@ const Banner = () => {
           developers unlock their full potential and drive innovation in the
           tech industry.
         </p>
-        <Link
-          href="about"
-          className="inline-flex items-center justify-center px-5 py-3 text-base font-medium text-center text-white bg-blue-700 rounded-lg hover:bg-blue-800 focus:ring-blue-300 dark:focus:ring-blue-900"
-        >
-          About Us
-          <svg
-            className="w-3.5 h-3.5 ms-2"
-            aria-hidden="true"
-            xmlns="http://www.w3.org/2000/svg"
-            fill="none"
-            viewBox="0 0 14 10"
-          >
-            <path
-              stroke="currentColor"
-              strokeLinecap="round"
-              strokeLinejoin="round"
-              strokeWidth="2"
-              d="M1 5h12m0 0L9 1m4 4L9 9"
-            />
-          </svg>
-        </Link>
+
+        <LinkButton rightArrow large shadow label="About Us" url="/about" />
         <div>
           <div className="cursor-pointer border dark:border-gray-600 text-gray-800 dark:text-gray-300 rounded-full inline-block p-4 mt-8 dark:bg-gray-800 shadow-xl">
             <FaArrowDown className="animate-bounce" />

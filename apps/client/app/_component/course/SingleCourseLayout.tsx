@@ -4,6 +4,7 @@ import React from "react";
 import { useRouter } from "next/navigation";
 import { FaArrowLeft } from "react-icons/fa";
 import { courseData } from "../../_utils/constant";
+import Button from "@repo/ui/button";
 
 const SearchLayout = () => {
   const router = useRouter();
@@ -24,11 +25,7 @@ const SearchLayout = () => {
         </div>
       </div>
 
-      <div>
-        <button className="p-2 font-bold text-white bg-blue-700 rounded-lg hover:bg-blue-800">
-          Enroll
-        </button>
-      </div>
+      <Button label="Enroll" shadow fullRounded onClick={() => {}} />
     </div>
   );
 };

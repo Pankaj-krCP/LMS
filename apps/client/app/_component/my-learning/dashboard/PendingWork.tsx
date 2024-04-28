@@ -1,6 +1,7 @@
 import React from "react";
 import { format } from "date-fns";
 import { underlineGreenCSS } from "../../../_utils/constant";
+import Button from "@repo/ui/button";
 
 const PendingWork = () => {
   const pendingTasks = [
@@ -45,9 +46,7 @@ const PendingWork = () => {
                   {format(task.dueDate, "MMMM dd, yyyy")}
                 </td>
                 <td className="px-6 py-4 whitespace-nowrap">
-                  <button className="bg-blue-500 hover:bg-blue-700 text-white font-bold py-2 px-4 rounded">
-                    Start
-                  </button>
+                  <Button label="Start" onClick={() => {}} />
                 </td>
               </tr>
             ))}

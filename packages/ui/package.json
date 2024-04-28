@@ -5,7 +5,9 @@
   "exports": {
     "./button": "./src/button.tsx",
     "./header": "./src/header.tsx",
+    "./linkButton": "./src/linkButton.tsx",
     "./meta": "./src/meta.tsx",
+    "./modal": "./src/modal.tsx",
     "./search-bar": "./src/search-bar.tsx",
     "./theme-provider": "./src/theme-provider.tsx"
   },

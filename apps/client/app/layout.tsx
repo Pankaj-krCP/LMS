@@ -2,6 +2,8 @@ import "./globals.css";
 import { ThemeProvider } from "@repo/ui/theme-provider";
 import ClientHeader from "./_component/home/Header";
 import ClientFooter from "./_component/home/Footer";
+import SignInModal from "./_component/auth/SignInModal";
+import SignUpModal from "./_component/auth/SignUpModal";
 
 export default function RootLayout({
   children,
@@ -12,6 +14,8 @@ export default function RootLayout({
     <html lang="en">
       <body className="relative bg-gray-100 dark:bg-gray-900 dark:text-gray-400 text-gray-600 duration-300 min-h-[100vh]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
+          <SignInModal />
+          <SignUpModal />
           <header>
             <ClientHeader />
           </header>

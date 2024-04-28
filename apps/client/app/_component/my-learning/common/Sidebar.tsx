@@ -2,7 +2,12 @@
 
 import React, { useState } from "react";
 import Link from "next/link";
-import { usePathname } from "next/navigation";
+import { usePathname, useRouter } from "next/navigation";
+
+interface Iitem {
+  title: string;
+  url: string;
+}
 
 const navigation = [
   { title: "Dashboard", url: "/my-learning" },
@@ -14,7 +19,13 @@ const navigation = [
 const Sidebar = () => {
   const [selectedOption, setSelectedOption] = useState<string>("Dashboard");
   const pathname = usePathname();
+  const router = useRouter();
   const paths = pathname.split("/");
+
+  const navigationHandler = (item: Iitem) => {
+    setSelectedOption(item.title);
+    router.push(item.url);
+  };
 
   return (
     <div
@@ -24,9 +35,9 @@ const Sidebar = () => {
         return (
           <div
             key={index}
-            className={`m-1 cursor-pointer ${selectedOption === item.title ? "bg-blue-500 text-white rounded-xl" : ""}`}
+            className={`m-1 cursor-pointer ${selectedOption === item.title ? "bg-blue-500 text-white rounded-xl" : "hover:bg-blue-300 hover:text-white hover:rounded-xl"}`}
             onClick={() => {
-              setSelectedOption(item.title);
+              navigationHandler(item);
             }}
           >
             <Link className="inline-flex w-ful p-4" href={item.url}>

@@ -35,10 +35,7 @@ const SearchLayout = () => {
 
       <div className="hidden 400px:block w-[30%] text-center">
         <Link href={"my-learning"}>
-          <Button
-            title="My Learning"
-            className=" hover:dark:text-white bg-gray-50 dark:bg-slate-900 border dark:border-gray-600 p-2"
-          />
+          <Button label="My Learning" shadow fullRounded onClick={() => {}} />
         </Link>
       </div>
     </div>
