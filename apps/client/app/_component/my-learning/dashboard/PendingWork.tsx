@@ -1,6 +1,6 @@
 import React from "react";
 import { format } from "date-fns";
-import { underlineGreenCSS } from "../../../_utils/constant";
+import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
 import Button from "@repo/ui/button";
 
 const PendingWork = () => {
@@ -10,7 +10,9 @@ const PendingWork = () => {
   ];
 
   return (
-    <div className="bg-white dark:bg-slate-800 p-4 shadow-lg rounded-lg">
+    <div
+      className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
+    >
       <h2 className={`${underlineGreenCSS} font-semibold mb-2`}>
         Pending Work
       </h2>

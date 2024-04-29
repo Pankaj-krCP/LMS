@@ -9,7 +9,7 @@ import {
   Tooltip,
   Legend,
 } from "chart.js/auto";
-import { underlineGreenCSS } from "../../../_utils/constant";
+import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
 Chart.register(CategoryScale, LinearScale, BarElement, Title, Tooltip, Legend);
 
 const MyProgress = () => {
@@ -79,7 +79,9 @@ const MyProgress = () => {
   };
 
   return (
-    <div className="bg-white dark:bg-slate-800 p-4 shadow-lg rounded-lg col-span-2">
+    <div
+      className={`bg-white dark:bg-slate-800 p-4 rounded-lg col-span-2 ${customShadow}`}
+    >
       <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
         Progress Chart
       </h2>

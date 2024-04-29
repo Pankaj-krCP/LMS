@@ -2,7 +2,7 @@
 
 import React from "react";
 import { MdCloudDownload } from "react-icons/md";
-import { underlineBlueCSS } from "../../../_utils/constant";
+import { customShadow, underlineBlueCSS } from "../../../_utils/constant";
 
 const Certificate = () => {
   const certificates = [
@@ -32,7 +32,7 @@ const Certificate = () => {
       {certificates.map((certificate) => (
         <div
           key={certificate.id}
-          className="bg-white dark:bg-slate-800 p-4 shadow-xl rounded-lg mb-4"
+          className={`bg-white dark:bg-slate-800 p-4 rounded-lg mb-4 ${customShadow}`}
         >
           <div className="flex items-center">
             <div className="w-1/2">

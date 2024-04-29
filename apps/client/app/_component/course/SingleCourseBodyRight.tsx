@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { courseDeatailsTabData } from "../../_utils/constant";
+import { courseDeatailsTabData, customShadow } from "../../_utils/constant";
 import SingleCourseReviewsTab from "./SingleCourseReviewsTab";
 import SingleCourseCurriculumTab from "./SingleCourseCurriculumTab";
 import SingleCourseDescriptionTab from "./SingleCourseDescriptionTab";
@@ -27,7 +27,9 @@ const SingleCourseBodyRight = () => {
 
   return (
     <div className="flex-col text-center">
-      <div className="m-4 p-3 inline-block border bg-white dark:bg-slate-900 dark:border-gray-600 rounded-full shadow-xl">
+      <div
+        className={`m-4 p-3 inline-block border bg-white dark:bg-slate-900 dark:border-gray-600 rounded-full ${customShadow}`}
+      >
         {courseDeatailsTabData.map((tab) => (
           <button
             key={tab.key}

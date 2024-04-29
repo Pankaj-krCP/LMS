@@ -2,6 +2,7 @@
 
 import React, { FC, useState, useMemo } from "react";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
+import { customShadow } from "../../_utils/constant";
 
 interface Props {
   title: string;
@@ -57,7 +58,7 @@ const SideLayoutOption: FC<Props> = ({ title, options }) => {
 
   return (
     <div
-      className={`${isOpen ? "bg-blue-500  text-white font-medium" : ""} p-4 mx-2 mt-4 border dark:border-gray-600 rounded-xl`}
+      className={`${isOpen ? "bg-blue-500  text-white font-medium" : ""} p-4 mx-2 mt-4 border dark:border-gray-600 rounded-xl ${customShadow}`}
     >
       <div
         className="flex gap-2 items-center justify-start mb-2"
@@ -91,7 +92,9 @@ const SideLayoutOption: FC<Props> = ({ title, options }) => {
                 checked={memoizedIsOptionSelected[item]}
                 onChange={() => selectOptionHandler(item)}
               />
-              <div>{item}</div>
+              <label className="cursor-pointer" htmlFor={item}>
+                {item}
+              </label>
             </div>
           ))}
         </div>

@@ -81,13 +81,13 @@ const SignUpModal = () => {
   return (
     <div>
       <Modal
-        isOpen={true}
+        isOpen={false}
         onClose={() => {}}
         onSubmit={onSubmit}
         title={"Sign Up"}
         body={bodyContent}
         footer={footerContent}
-        actionLabel={"SignIn"}
+        actionLabel={"Register"}
         disabled={isLoading}
       />
     </div>

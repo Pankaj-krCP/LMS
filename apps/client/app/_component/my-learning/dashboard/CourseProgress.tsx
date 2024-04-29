@@ -1,7 +1,7 @@
 import React from "react";
 import { Pie } from "react-chartjs-2";
 import { ChartOptions } from "chart.js";
-import { underlineGreenCSS } from "../../../_utils/constant";
+import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
 // import Image from "next/image";
 
 const Progress = () => {
@@ -44,7 +44,9 @@ const Progress = () => {
 
   return (
     <div>
-      <div className="bg-white dark:bg-slate-800 p-2 mb-4 shadow-lg rounded-lg flex items-center justify-center gap-2">
+      <div
+        className={`bg-white dark:bg-slate-800 p-2 mb-4 rounded-lg flex items-center justify-center gap-2 ${customShadow}`}
+      >
         <div className="rounded-full h-28 w-28 bg-slate-600">
           {/* <Image
             width={20}
@@ -65,7 +67,9 @@ const Progress = () => {
         </div>
       </div>
 
-      <div className="bg-white dark:bg-slate-800 p-4 shadow-lg rounded-lg">
+      <div
+        className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
+      >
         <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
           My Course Progress
         </h2>

@@ -2,14 +2,14 @@ import { FC } from "react";
 import { FaSearch } from "react-icons/fa";
 
 interface Props {
-  className: string;
+  className?: string;
   search: string;
   setSearch: Function;
 }
 
 const SearchBar: FC<Props> = ({ className, search, setSearch }) => {
   return (
-    <div className="relative">
+    <div className="relative flex">
       <input
         type="text"
         placeholder="Search here"
@@ -19,7 +19,7 @@ const SearchBar: FC<Props> = ({ className, search, setSearch }) => {
         }}
         className={`${className} pr-10 border rounded-lg dark:border-gray-600 dark:bg-slate-900 outline-none focus:ring-1 focus:ring-blue-200`}
       />
-      <div className="absolute right-3 top-3">
+      <div className="-ml-7 mt-3">
         <FaSearch fill="gray" className="h-5 w-5" />
       </div>
     </div>

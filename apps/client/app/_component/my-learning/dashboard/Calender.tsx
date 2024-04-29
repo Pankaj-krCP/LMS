@@ -1,7 +1,7 @@
 import React from "react";
 import Calendar from "react-calendar";
 import "react-calendar/dist/Calendar.css";
-import { underlineGreenCSS } from "../../../_utils/constant";
+import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
 
 const Calender = () => {
   const events = [
@@ -9,7 +9,9 @@ const Calender = () => {
     { id: 2, title: "Submit project proposal", date: new Date(2024, 4, 5) },
   ];
   return (
-    <div className="bg-white dark:bg-slate-800 p-4 shadow-lg rounded-lg">
+    <div
+      className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
+    >
       <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
         My Calendar
       </h2>

@@ -1,7 +1,6 @@
 import { FC, useMemo, useState } from "react";
 import Link from "next/link";
 import { NavItemsProps } from "../../header";
-import { ButtonHover } from "../../utils/constant";
 import { UnderLine } from "../../utils/constant";
 import { usePathname } from "next/navigation";
 
@@ -23,7 +22,7 @@ const NavItems: FC<Props> = ({ navItemsData }) => {
         navItemsData.map((item, index) => (
           <div
             key={index}
-            className={`${index === 0 ? "mt-1 800px:mt-0" : ""} p-2 800px:p-1 800px:mx-1 rounded-lg ${ButtonHover}`}
+            className={`${index === 0 ? "mt-1 800px:mt-0" : ""} p-2 800px:p-1 800px:mx-1 rounded-lg`}
           >
             <Link href={item.url}>
               <span
