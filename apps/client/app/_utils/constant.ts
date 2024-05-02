@@ -150,41 +150,95 @@ export const instructor = {
 // ------------------------ DashBoard Data -------------------------------
 
 //--------------------------------enrolled course-------------------------------
+// utils/courseData.ts
 export const courseTopics = [
   {
     module: 1,
     topic: "MongoDB",
     lectures: [
-      "Introduction to MongoDB",
-      "CRUD Operations in MongoDB",
-      "MongoDB Atlas",
+      {
+        title: "Introduction to MongoDB",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "CRUD Operations in MongoDB",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "MongoDB Atlas",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
     ],
   },
   {
     module: 2,
     topic: "Express.js",
     lectures: [
-      "Introduction to Express.js",
-      "Routing in Express.js",
-      "Middleware in Express.js",
+      {
+        title: "Introduction to Express.js",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Routing in Express.js",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Middleware in Express.js",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
     ],
   },
   {
     module: 3,
     topic: "React.js",
     lectures: [
-      "Introduction to React.js",
-      "Components and Props",
-      "State and Lifecycle",
+      {
+        title: "Introduction to React.js",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Components and Props",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "State and Lifecycle",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
     ],
   },
   {
     module: 4,
     topic: "Node.js",
     lectures: [
-      "Introduction to Node.js",
-      "Node.js Modules",
-      "Node.js and Express.js Integration",
+      {
+        title: "Introduction to Node.js",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Node.js Modules",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
+      {
+        title: "Node.js and Express.js Integration",
+        url: "https://www.youtube.com/watch?v=dQw4w9WgXcQ",
+      },
     ],
+  },
+];
+
+// ---------------------------------Lecture Video--------------------------------
+// utils/lectureData.ts
+export const videoData = [
+  {
+    id: 1,
+    title: "Introduction to React",
+    description: "Learn the basics of React.js",
+    resources: [
+      {
+        name: "React Documentation",
+        url: "https://reactjs.org/docs/getting-started.html",
+      },
+    ],
+    transcript: "This is the transcript for the introduction to React lecture.",
   },
 ];

@@ -34,7 +34,7 @@ const LectureLeftPageTopics = ({ topic }: { topic: any }) => {
                 <span className="mr-1 mt-1">
                   <FaCheckCircle size={16} fill={"green"} />
                 </span>
-                <span>{lecture}</span>
+                <span>{lecture?.title}</span>
               </li>
             ))}
           </ul>
