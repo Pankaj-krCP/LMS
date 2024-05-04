@@ -1,9 +1,15 @@
+"use client";
 import Link from "next/link";
+import { usePathname } from "next/navigation";
 import { FaFacebookF, FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 
 const ClientFooter = () => {
+  const path = usePathname();
+  const isHome = path.split("/").length === 1;
   return (
-    <div className=" border-t shadow dark:border-gray-600">
+    <div
+      className={`${!isHome && "hidden"} border-t shadow dark:border-gray-600`}
+    >
       <div className="w-full max-w-screen-xl mx-auto p-6">
         <div className="sm:flex sm:items-center sm:justify-between">
           <Link

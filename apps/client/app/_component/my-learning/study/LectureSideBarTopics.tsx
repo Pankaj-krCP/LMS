@@ -1,8 +1,10 @@
+"use client";
+
 import React, { useState } from "react";
 import { FaCheckCircle, FaAngleDown } from "react-icons/fa";
 import { customShadow } from "../../../_utils/constant";
 
-const LectureLeftPageTopics = ({ topic }: { topic: any }) => {
+const LectureSideBarTopic = ({ topic }: { topic: any }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
@@ -44,4 +46,4 @@ const LectureLeftPageTopics = ({ topic }: { topic: any }) => {
   );
 };
 
-export default LectureLeftPageTopics;
+export default LectureSideBarTopic;

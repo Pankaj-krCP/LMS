@@ -7,13 +7,15 @@ import VideoPlayer from "./VideoPlayer";
 const LectureRightPage = () => {
   const lectureData = courseTopics[0];
   return (
-    <div className="p-2">
-      <LectureRightPageTopic
-        module={lectureData?.module || 0}
-        topic={lectureData?.topic || ""}
-      />
-      <div className="my-2 w-[75%]">
-        <VideoPlayer lecture={lectureData?.lectures[0]} />
+    <div>
+      <div className="p-2">
+        <LectureRightPageTopic
+          module={lectureData?.module || 0}
+          topic={lectureData?.topic || ""}
+        />
+        <div className="w-[75%]">
+          <VideoPlayer lecture={lectureData?.lectures[0]} />
+        </div>
       </div>
     </div>
   );
