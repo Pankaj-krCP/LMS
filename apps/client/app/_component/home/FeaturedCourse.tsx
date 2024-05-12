@@ -1,4 +1,5 @@
 import React from "react";
+import { courses } from "../../_utils/constant";
 import CourseCard from "../common/CourseCard";
 
 const FeaturedCourse = () => {
@@ -12,10 +13,13 @@ const FeaturedCourse = () => {
       </div>
 
       <div className="flex gap-5 items-center justify-around py-8 px-12 800px:px-20 flex-wrap">
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
-        <CourseCard />
+        {courses.map((item, index) => {
+          return (
+            <div key={index}>
+              <CourseCard course={item} />
+            </div>
+          );
+        })}
       </div>
     </>
   );

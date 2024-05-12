@@ -1,29 +1,32 @@
 import React from "react";
-import {
-  courseData,
-  underlineBlueCSS,
-  underlineGreenCSS,
-} from "../../_utils/constant";
+import { underlineBlueCSS, underlineGreenCSS } from "../../../_utils/constant";
 import { FaStar, FaUser } from "react-icons/fa";
 import { FaQuoteLeft, FaQuoteRight } from "react-icons/fa";
 
-const SingleCourseReviewsTab = () => {
+interface Props {
+  rating: string;
+  reviews: { user: string; rating: number; review: string }[];
+}
+
+const SingleCourseReviewsTab: React.FC<Props> = ({ rating, reviews }) => {
   return (
     <div>
       <div className="my-4">
-        <h2 className={`${underlineBlueCSS}`}>Rating and Reviews</h2>
+        <h2 className={`${underlineBlueCSS} text-center`}>
+          Rating and Reviews
+        </h2>
       </div>
       <div className="p-1">
         <div className={`flex items-center my-2 ${underlineGreenCSS}`}>
           <FaStar className="text-yellow-500 mr-1" />
           <span>
-            Rating: {courseData.rating} ({courseData.reviews.length})
+            Rating: {rating} ({reviews.length})
           </span>
         </div>
         <div>
-          {courseData.reviews.map((review) => (
+          {reviews.map((review, index) => (
             <div
-              key={review.id}
+              key={index}
               className="mb-4 p-2 border dark:border-gray-600 rounded-lg items-center"
             >
               <div className="flex items-center justify-between">

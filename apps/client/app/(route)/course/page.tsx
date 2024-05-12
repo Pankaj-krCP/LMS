@@ -1,5 +1,5 @@
 import React from "react";
-import Body from "../../../_component/course/Body";
+import Body from "../../_component/course/Body";
 
 const page = () => {
   return (

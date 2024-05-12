@@ -1,40 +1,57 @@
 import React from "react";
 import Image from "next/image";
 import Link from "next/link";
-import { customShadow, testThumbnail } from "../../_utils/constant";
+import { customShadow, specialization } from "../../_utils/constant";
 
-const CourseCard = () => {
+const CourseCard = ({ course }: { course: any }) => {
+  const specializationTitle = specialization.filter(
+    (item) => item.id === course?.specializationId
+  );
   return (
     <div
-      className={`cursor-pointer rounded-lg  border bg-white dark:bg-slate-900 border-gray-200 dark:border-gray-600 overflow-hidden w-64 ${customShadow}`}
+      className={`rounded-lg border bg-white dark:bg-slate-900 border-gray-200 dark:border-gray-600 overflow-hidden w-64 ${customShadow} h-80`}
     >
-      <Link href={"course/single/jhjwfjhwbhje"}>
+      <Link href={`/course/single/${course?.id}`}>
         <Image
           width={10}
           height={10}
-          src={testThumbnail}
+          src={course?.thumbnail || ""}
           alt="Course Image"
-          className="w-full h-40 object-fit"
+          className="w-full h-40 object-cover"
         />
-        <div className="p-4">
-          <h3 className="text-xl font-bold ">Course Title</h3>
-          <p className="mt-2 ">
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit.
-          </p>
-          <div className="mt-2 flex justify-between items-center">
-            <p className="text-lg font-bold text-green-600">$49.99</p>
+      </Link>
+      <div className="p-4">
+        <div className="h-16">
+          <Link href={`/course/specialization/${specializationTitle[0]?.slug}`}>
+            <span className="text-blue-500 font-bold text-sm hover:underline">
+              Specialization: {specializationTitle[0]?.title}
+            </span>
+          </Link>
+        </div>
 
-            <div className="flex items-center rounded-lg border overflow-hidden dark:border-gray-600">
-              <span className="bg-blue-600 items-center justify-center text-white font-bold text-sm px-2 py-1">
-                4.8
-              </span>
-              <span className=" rounded-br-lg rounded-tr-lg items-center justify-center font-bold text-sm px-2 py-1">
-                50
-              </span>
+        <Link href={`/course/single/${course?.id}`}>
+          <div>
+            <div>
+              <h3 className="text-md font-bold">
+                {course?.id} : {course?.title}
+              </h3>
+            </div>
+
+            <div className="mt-1 flex justify-between items-center">
+              <p className="text-lg font-bold text-green-600">$49.99</p>
+
+              <div className="flex items-center rounded-lg border overflow-hidden dark:border-gray-600">
+                <span className="bg-blue-600 items-center justify-center text-white font-bold text-sm px-2 py-1">
+                  4.8
+                </span>
+                <span className="rounded-br-lg rounded-tr-lg items-center justify-center font-bold text-sm px-2 py-1">
+                  50
+                </span>
+              </div>
             </div>
           </div>
-        </div>
-      </Link>
+        </Link>
+      </div>
     </div>
   );
 };

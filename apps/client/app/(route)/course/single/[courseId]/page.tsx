@@ -1,9 +1,11 @@
 import React from "react";
-import SingleCourseBody from "../../../../_component/course/SingleCourseBody";
+import SingleCourseBody from "../../../../_component/course/single/SingleCourseBody";
+import SingleCourseHeader from "../../../../_component/course/single/SingleCourseHeader";
 
 const page = () => {
   return (
-    <div>
+    <div className="-mt-2">
+      <SingleCourseHeader />
       <SingleCourseBody />
     </div>
   );

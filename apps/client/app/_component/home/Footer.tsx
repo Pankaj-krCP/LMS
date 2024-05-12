@@ -5,7 +5,8 @@ import { FaFacebookF, FaDiscord, FaTwitter, FaGithub } from "react-icons/fa";
 
 const ClientFooter = () => {
   const path = usePathname();
-  const isHome = path.split("/").length === 1;
+  const isHome = path.split("/")[1] === "";
+
   return (
     <div
       className={`${!isHome && "hidden"} border-t shadow dark:border-gray-600`}
