@@ -341,9 +341,9 @@ export const courses = [
 // -----------------------------Curse Data--------------------------------------
 
 export const courseDeatailsTabData = [
+  { key: "description", label: "Description" },
   { key: "instructor", label: "Instructor" },
   { key: "reviews", label: "Rating & Reviews" },
-  { key: "description", label: "Description" },
   { key: "modules", label: "Curriculum" },
   { key: "faq", label: "FAQ" },
 ];

@@ -1,15 +1,38 @@
 "use client";
 
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 import SearchBar from "@repo/ui/search-bar";
 import { FaChevronDown, FaChevronUp } from "react-icons/fa";
 import Filter from "./Filter";
 import { customShadow } from "../../_utils/constant";
-import LinkButton from "@repo/ui/linkButton";
+import { useRouter } from "next/navigation";
 
 const SearchLayout = () => {
   const [search, setSearch] = useState("");
   const [openFilter, setOpenFilter] = useState(false);
+  const router = useRouter();
+
+  const handleSearch = (event: any) => {
+    event.preventDefault();
+    if (search == "") {
+      router.push("/course");
+    } else {
+      router.push(`/course/search/${search.split(" ").join("-")}`);
+    }
+  };
+
+  useEffect(() => {
+    const handleClickOutside = (event: any) => {
+      if (!event.target.closest(".filter-container")) {
+        setOpenFilter(false);
+      }
+    };
+
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => {
+      document.removeEventListener("mousedown", handleClickOutside);
+    };
+  }, []);
 
   return (
     <div className="fixed w-full py-[6px] flex gap-2 items-center justify-around bg-white dark:bg-slate-900 border-b dark:border-gray-600 z-[50]">
@@ -29,14 +52,17 @@ const SearchLayout = () => {
         </div>
         {openFilter && (
           <div
-            className={`absolute w-full p-4 top-[45px] rounded-lg border dark:border-gray-600 bg-white dark:bg-slate-900 shadow-lg ${customShadow}`}
+            className={`filter-container absolute w-full p-4 top-[45px] rounded-lg border dark:border-gray-600 bg-white dark:bg-slate-900 shadow-lg ${customShadow}`}
           >
             <Filter />
           </div>
         )}
       </div>
 
-      <div className="w-[75%] flex gap-5 justify-start">
+      <form
+        onSubmit={handleSearch}
+        className="w-[75%] flex gap-5 justify-start"
+      >
         <div className="w-[60%]">
           <SearchBar
             className="p-2 w-full"
@@ -46,12 +72,14 @@ const SearchLayout = () => {
         </div>
 
         <div className="hidden 400px:block text-center">
-          <LinkButton
-            label="Search"
-            url={`/course/search/${search.split(" ").join("-")}`}
-          />
+          <button
+            type="submit"
+            className="bg-blue-500 hover:bg-blue-700 text-white font-semibold py-2 px-4 rounded-lg"
+          >
+            Search
+          </button>
         </div>
-      </div>
+      </form>
     </div>
   );
 };

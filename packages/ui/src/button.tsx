@@ -8,7 +8,6 @@ interface ButtonProps {
   large?: boolean;
   onClick: () => void;
   disabled?: boolean;
-  outline?: boolean;
   rightArrow?: boolean;
   leftArrow?: boolean;
 }
@@ -22,7 +21,6 @@ const Button: React.FC<ButtonProps> = ({
   large,
   onClick,
   disabled,
-  outline,
   rightArrow,
   leftArrow,
 }) => {
@@ -36,19 +34,12 @@ const Button: React.FC<ButtonProps> = ({
                     font-semibold
                     hover:opacity-80
                     transition
-                    border-2
+                    border
                     ${fullWidth ? "w-full" : "w-fit"}
                     ${shadow ? "shadow-lg" : ""}
                     ${fullRounded ? "rounded-full" : "rounded-lg"}
-                    ${secondary ? "bg-white" : "bg-blue-500"}
-                    ${secondary ? "text-black" : "text-white"}
-                    ${secondary ? "border-black" : "border-blue-500"}
-                    ${large ? "text-xl" : "text-md"}
-                    ${large ? "px-5" : "px-4"}
-                    ${large ? "py-3" : "py-2"}
-                    ${outline ? "bg-transparent" : ""}
-                    ${outline ? "border-white" : ""}
-                    ${outline ? "text-white" : ""}
+                    ${secondary ? "bg-white border-gray-600 text-black" : "bg-blue-500 text-white border-blue-500"}
+                    ${large ? "text-xl px-5 py-3" : "text-md px-4 py-2"}
                 `}
     >
       {leftArrow && <FaArrowLeft />}

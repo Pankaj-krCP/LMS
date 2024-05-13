@@ -1,10 +1,11 @@
 "use client";
 
 import React from "react";
+import Link from "next/link";
 import { useParams, useRouter } from "next/navigation";
-import { FaArrowLeft } from "react-icons/fa";
+import { FaArrowLeft, FaHome } from "react-icons/fa";
 import { courses } from "../../../_utils/constant";
-import Button from "@repo/ui/button";
+import { customShadow } from "../../../_utils/constant";
 
 const SingleCourseHeader = () => {
   const router = useRouter();
@@ -14,20 +15,32 @@ const SingleCourseHeader = () => {
   const goBack = () => {
     router.back();
   };
-
   return (
-    <div className="gap-2 w-full py-[6px] flex items-center justify-around bg-gray-50 dark:bg-slate-900">
-      <div onClick={goBack} className="flex items-center gap-2 cursor-pointer">
-        <FaArrowLeft />
-        <p className="font-bold">Back</p>
-      </div>
-      <div className="w-[50%] text-center">
-        <div className="w-full text-sm 800px:text-lg font-bold">
-          {courseId} : {courseTitle}
+    <div>
+      <div
+        className={`inline-flex items-center m-2 rounded-lg font-semibold bg-white dark:bg-slate-950 ${customShadow}`}
+      >
+        <div
+          onClick={goBack}
+          className="p-2 flex items-center gap-2 cursor-pointer hover:text-red-700"
+        >
+          <FaArrowLeft />
+          <p>Back</p>
+        </div>
+
+        <Link href={"/course"}>
+          <div className="p-2 border-l cursor-pointer dark:border-gray-600 hover:text-red-700">
+            <FaHome size={24} />
+          </div>
+        </Link>
+
+        <div className="p-2 border-l dark:border-gray-600">
+          single :{" "}
+          <span className="text-blue-500">
+            {courseId} : {courseTitle}
+          </span>
         </div>
       </div>
-
-      <Button label="Enroll" shadow fullRounded onClick={() => {}} />
     </div>
   );
 };

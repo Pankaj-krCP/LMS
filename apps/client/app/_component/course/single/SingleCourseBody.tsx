@@ -12,6 +12,7 @@ import SingleCourseCurriculumTab from "./SingleCourseCurriculumTab";
 import SingleCourseDescriptionTab from "./SingleCourseDescriptionTab";
 import SingleCourseFAQTab from "./SingleCourseFAQTab";
 import SingleCourseInstructorTab from "./SingleCourseInstructorTab";
+import Button from "@repo/ui/button";
 
 const SingleCourseBody = () => {
   const params = useParams();
@@ -68,6 +69,9 @@ const SingleCourseBody = () => {
       </div>
       <div className="p-2 m-2 400px:mx-10 800px:max-w-[50%] 800px:mx-auto bg-white dark:bg-slate-950 rounded-lg shadow-lg">
         <div className="text-start">{renderTabContent()}</div>
+      </div>
+      <div className="mx-2 my-4 400px:mx-10 800px:max-w-[50%] 800px:mx-auto">
+        <Button label="Enroll" fullWidth shadow onClick={() => {}} />
       </div>
     </div>
   );

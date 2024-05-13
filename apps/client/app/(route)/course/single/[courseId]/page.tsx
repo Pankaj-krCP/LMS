@@ -4,7 +4,7 @@ import SingleCourseHeader from "../../../../_component/course/single/SingleCours
 
 const page = () => {
   return (
-    <div className="-mt-2">
+    <div>
       <SingleCourseHeader />
       <SingleCourseBody />
     </div>

@@ -33,7 +33,7 @@ const SearchHeader = () => {
         </Link>
 
         <div className="p-2 border-l dark:border-gray-600">
-          Search Result For : <span className="text-blue-500">{slug}</span>
+          Search : <span className="text-blue-500">{slug}</span>
         </div>
       </div>
     </div>

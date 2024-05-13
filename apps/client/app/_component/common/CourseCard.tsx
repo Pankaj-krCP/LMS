@@ -21,7 +21,7 @@ const CourseCard = ({ course }: { course: any }) => {
         />
       </Link>
       <div className="p-4">
-        <div className="h-16">
+        <div className="h-12">
           <Link href={`/course/specialization/${specializationTitle[0]?.slug}`}>
             <span className="text-blue-500 font-bold text-sm hover:underline">
               Specialization: {specializationTitle[0]?.title}
@@ -36,8 +36,13 @@ const CourseCard = ({ course }: { course: any }) => {
                 {course?.id} : {course?.title}
               </h3>
             </div>
+            <div>
+              <span className="text-sm text-gray-400 dark:text-gray-600 font-semibold">
+                20 hour
+              </span>
+            </div>
 
-            <div className="mt-1 flex justify-between items-center">
+            <div className="flex justify-between items-center">
               <p className="text-lg font-bold text-green-600">$49.99</p>
 
               <div className="flex items-center rounded-lg border overflow-hidden dark:border-gray-600">
