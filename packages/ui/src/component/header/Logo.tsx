@@ -5,7 +5,7 @@ const Logo = () => {
     <div>
       <Link href={"/"}>
         <span className="text-[25px] font-Poppins font-[500]">
-          <span className="inline-block text-sky-500">CodingSync</span>
+          <span className="inline-block text-sky-500">DevHome</span>
         </span>
       </Link>
     </div>

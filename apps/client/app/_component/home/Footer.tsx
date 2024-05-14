@@ -18,7 +18,7 @@ const ClientFooter = () => {
             className="flex items-center mb-4 sm:mb-0 space-x-3 rtl:space-x-reverse"
           >
             <span className="self-center text-2xl font-semibold whitespace-nowrap">
-              CodingSync
+              DevHome
             </span>
           </Link>
           <ul className="flex flex-wrap items-center mb-6 text-sm font-medium sm:mb-0">
@@ -49,7 +49,7 @@ const ClientFooter = () => {
           <span className="text-sm sm:text-center">
             © 2024{" "}
             <Link href="#" className="hover:underline">
-              CodingSync™
+              DevHome™
             </Link>
             . All Rights Reserved.
           </span>

@@ -6,8 +6,8 @@ const page = () => {
   return (
     <div>
       <Meta
-        title="CodingSync"
-        description="CodingSync is a platform for code to boost their knowledge"
+        title="DevHome"
+        description="DevHome is a platform for code to boost their knowledge"
         keywords="Programming,MERN,Next,Express,Node,React,MongoDB,Turborepo"
       />
       <ClientBody />

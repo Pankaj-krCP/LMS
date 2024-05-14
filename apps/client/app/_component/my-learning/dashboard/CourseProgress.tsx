@@ -2,7 +2,7 @@ import React from "react";
 import { Pie } from "react-chartjs-2";
 import { ChartOptions } from "chart.js";
 import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
-// import Image from "next/image";
+import { FaUser } from "react-icons/fa";
 
 const Progress = () => {
   const courseProgress = {
@@ -47,15 +47,8 @@ const Progress = () => {
       <div
         className={`bg-white dark:bg-slate-800 p-2 mb-4 rounded-lg flex items-center justify-center gap-2 ${customShadow}`}
       >
-        <div className="rounded-full h-28 w-28 bg-slate-600">
-          {/* <Image
-            width={20}
-            height={20}
-            src={
-              "profilebakery.com/wp-content/uploads/2023/04/AI-Profile-Picture.jpg"
-            }
-            alt="Profile pic"
-          /> */}
+        <div className="rounded-full h-28 w-28 border">
+          <FaUser className="h-full w-full p-5" />
         </div>
         <div>
           <h1 className="text-3xl font-bold text-center">

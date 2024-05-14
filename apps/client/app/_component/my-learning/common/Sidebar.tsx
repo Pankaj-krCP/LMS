@@ -14,7 +14,7 @@ const navigation = [
   { title: "Dashboard", url: "/my-learning" },
   { title: "Study", url: "/my-learning/study" },
   { title: "Discussion", url: "/my-learning/discussion" },
-  { title: "certificate", url: "/my-learning/certificate" },
+  { title: "Certificate", url: "/my-learning/certificate" },
 ];
 
 const Sidebar = () => {

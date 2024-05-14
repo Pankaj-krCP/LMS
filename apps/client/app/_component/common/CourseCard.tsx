@@ -38,7 +38,7 @@ const CourseCard = ({ course }: { course: any }) => {
             </div>
             <div>
               <span className="text-sm text-gray-400 dark:text-gray-600 font-semibold">
-                20 hour
+                20h35m
               </span>
             </div>
 
