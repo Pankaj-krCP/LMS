@@ -5,7 +5,7 @@ export const underlineBlueCSS =
 export const underlineGreenCSS =
   "text-xl font-semibold underline underline-offset-4 decoration-2 decoration-green-400 dark:decoration-green-700";
 
-export const customShadow = "shadow-md shadow-gray-600";
+export const customShadow = "shadow shadow-gray-600";
 
 // ---------------------------Course Card--------------------------------------
 export const testThumbnail =

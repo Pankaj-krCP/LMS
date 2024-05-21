@@ -1,13 +1,13 @@
 import React from "react";
-import { courseTopics } from "../../../_utils/constant";
-import LectureSideBarTopic from "./LectureSideBarTopics";
+import { courses } from "../../../_utils/constant";
+import LectureSideBarModule from "./LectureSideBarModule";
 
 const LectureSideBar = () => {
   return (
     <div>
       <div className="p-2">
-        {courseTopics.map((topic, index) => (
-          <LectureSideBarTopic key={index} topic={topic} />
+        {courses[0]?.modules?.map((module, index) => (
+          <LectureSideBarModule key={index} module={module} />
         ))}
       </div>
     </div>
