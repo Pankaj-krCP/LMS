@@ -17,14 +17,10 @@ const LectureRightPage = () => {
       </div>
 
       <div className="flex">
-        <div
-          className={`w-[70%] bg-white dark:bg-gray-950 ${customShadow} rounded`}
-        >
+        <div className={`w-[70%] ${customShadow} rounded`}>
           <VideoPlayer url={courses[0]?.modules[0]?.lectures[0]?.url || ""} />
         </div>
-        <div
-          className={`relative w-[30%]  bg-white dark:bg-gray-950 ml-2 rounded ${customShadow}`}
-        >
+        <div className={`relative w-[30%] ml-2 rounded ${customShadow}`}>
           <div className="border-b dark:border-gray-600 flex p-2 gap-2 font-semibold">
             <p className="cursor-pointer text-blue-500">Comment</p>
             <p className="cursor-pointer">Resources</p>
@@ -33,7 +29,7 @@ const LectureRightPage = () => {
           <div className="p-2">
             <div className="flex gap-1">
               <FaCircleUser size={24} />
-              <div className="px-2 pb-2 rounded bg-gray-200">
+              <div className="px-2 pb-2 rounded-lg bg-gray-100 dark:bg-slate-950">
                 <p className="text-sm font-semibold">~ user123</p>
                 <p>hello</p>
               </div>

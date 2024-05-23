@@ -9,7 +9,7 @@ const CourseCard = ({ course }: { course: any }) => {
   );
   return (
     <div
-      className={`rounded-lg border bg-white dark:bg-slate-900 border-gray-200 dark:border-gray-600 overflow-hidden w-64 ${customShadow} h-80`}
+      className={`rounded-lg border   border-gray-200 dark:border-gray-600 overflow-hidden w-64 ${customShadow} h-80`}
     >
       <Link href={`/course/single/${course?.id}`}>
         <Image

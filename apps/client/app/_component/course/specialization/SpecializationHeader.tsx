@@ -16,7 +16,7 @@ const SpecializationHeader = () => {
   return (
     <div>
       <div
-        className={`inline-flex items-center m-2 rounded-lg font-semibold bg-white dark:bg-slate-950 ${customShadow}`}
+        className={`inline-flex items-center m-2 rounded-lg font-semibold ${customShadow}`}
       >
         <div
           onClick={goBack}

@@ -4,9 +4,7 @@ import { customShadow } from "../../_utils/constant";
 const page = () => {
   return (
     <div className="flex items-center justify-center h-screen">
-      <div
-        className={`bg-white dark:bg-gray-950 rounded-lg p-6 ${customShadow}`}
-      >
+      <div className={`rounded-lg p-6 ${customShadow}`}>
         <h1 className="text-3xl font-bold mb-4 text-center">About DevHome</h1>
         <p className="text-lg mb-4">
           DevHome is a modern platform that offers a wide range of software

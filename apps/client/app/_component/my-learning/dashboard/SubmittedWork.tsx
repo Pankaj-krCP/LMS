@@ -17,15 +17,13 @@ const SubmittedWork = () => {
   ];
 
   return (
-    <div
-      className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
-    >
+    <div className={`  p-4 rounded-lg ${customShadow}`}>
       <h2 className={`${underlineGreenCSS} font-semibold mb-2`}>
         Submitted Work
       </h2>
-      <div className="overflow-x-auto border rounded-lg">
-        <table className="max-w-full divide-y divide-gray-200">
-          <thead className="bg-gray-50">
+      <div className="overflow-x-auto border dark:border-gray-600 rounded-lg">
+        <table className="max-w-full divide-y dark:divide-gray-600">
+          <thead className="bg-gray-50 dark:bg-slate-950">
             <tr>
               <th
                 scope="col"
@@ -37,7 +35,7 @@ const SubmittedWork = () => {
                 scope="col"
                 className="px-6 py-3 text-left text-xs font-medium text-gray-500 uppercase tracking-wider"
               >
-                Submission Date
+                Submitted
               </th>
               <th
                 scope="col"
@@ -47,7 +45,7 @@ const SubmittedWork = () => {
               </th>
             </tr>
           </thead>
-          <tbody className="bg-white divide-y divide-gray-200">
+          <tbody className="divide-y dark:divide-gray-600">
             {pendingTasks.map((task) => (
               <tr key={task.id}>
                 <td className="px-6 py-4 whitespace-nowrap">{task.task}</td>

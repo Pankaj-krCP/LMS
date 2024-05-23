@@ -25,7 +25,7 @@ const EnrolledCourseCard: React.FC<Props> = ({
 
   return (
     <div
-      className={`${paused ? "border border-yellow-500" : customShadow} relative p-4 rounded-lg mb-4 min-w-[60%] bg-white dark:bg-slate-700 `}
+      className={`${paused ? "border border-yellow-500" : customShadow} relative p-4 rounded-lg mb-4 min-w-[60%] bg-white dark:bg-slate-900 `}
     >
       <h2 className={`text-lg font-semibold mb-2`}>{title}</h2>
       <div

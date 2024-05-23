@@ -45,7 +45,7 @@ const Progress = () => {
   return (
     <div>
       <div
-        className={`bg-white dark:bg-slate-800 p-2 mb-4 rounded-lg flex items-center justify-center gap-2 ${customShadow}`}
+        className={`  p-2 mb-4 rounded-lg flex items-center justify-center gap-2 ${customShadow}`}
       >
         <div className="rounded-full h-28 w-28 border">
           <FaUser className="h-full w-full p-5" />
@@ -60,9 +60,7 @@ const Progress = () => {
         </div>
       </div>
 
-      <div
-        className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
-      >
+      <div className={`  p-4 rounded-lg ${customShadow}`}>
         <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
           My Course Progress
         </h2>

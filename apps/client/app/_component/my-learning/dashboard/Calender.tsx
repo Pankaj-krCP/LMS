@@ -9,22 +9,22 @@ const Calender = () => {
     { id: 2, title: "Submit project proposal", date: new Date(2024, 4, 5) },
   ];
   return (
-    <div
-      className={`bg-white dark:bg-slate-800 p-4 rounded-lg ${customShadow}`}
-    >
+    <div className={`p-4 rounded-lg ${customShadow}`}>
       <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
         My Calendar
       </h2>
-      <div>
-        <Calendar
-          className="border-gray-200 border-2 rounded-lg custom-calendar"
-          tileClassName={({ date }) => {
-            const event = events.find(
-              (event) => event.date.toDateString() === date.toDateString()
-            );
-            return event ? "bg-blue-200" : null;
-          }}
-        />
+      <div className="flex justify-center py-2">
+        <div className="inline-flex items-center">
+          <Calendar
+            className="!border-none rounded-lg custom-calendar !bg-inherit"
+            tileClassName={({ date }) => {
+              const event = events.find(
+                (event) => event.date.toDateString() === date.toDateString()
+              );
+              return event ? "bg-blue-200" : null;
+            }}
+          />
+        </div>
       </div>
     </div>
   );

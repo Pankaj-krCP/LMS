@@ -9,7 +9,7 @@ interface Props {
 const LectureRightPageTitle: React.FC<Props> = ({ title }) => {
   return (
     <div
-      className={`inline-flex items-center rounded-lg font-semibold bg-white dark:bg-slate-950 ${customShadow}`}
+      className={`inline-flex items-center rounded-lg font-semibold ${customShadow}`}
     >
       <div className="p-2 flex items-center gap-2 cursor-pointer hover:text-red-700">
         <FaArrowLeft />

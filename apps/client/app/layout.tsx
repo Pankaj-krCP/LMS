@@ -12,7 +12,7 @@ export default function RootLayout({
 }): JSX.Element {
   return (
     <html lang="en">
-      <body className="relative bg-gray-100 dark:bg-gray-900 dark:text-gray-400 text-gray-600 duration-300 min-h-[100vh]">
+      <body className="relative bg-white dark:bg-slate-900 dark:text-gray-400 text-gray-600 duration-300 min-h-[100vh]">
         <ThemeProvider attribute="class" defaultTheme="system" enableSystem>
           <SignInModal />
           <SignUpModal />
@@ -21,7 +21,7 @@ export default function RootLayout({
           </header>
           <div>{children}</div>
 
-          <footer className="absolute w-full bg-white dark:bg-slate-900 -bottom-36">
+          <footer className="absolute w-full -bottom-36">
             <ClientFooter />
           </footer>
         </ThemeProvider>

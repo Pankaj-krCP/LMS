@@ -10,7 +10,7 @@ const MainBody = () => {
           Web development professional
         </span>
       </div>
-      <div className="flex gap-5 overflow-x-auto px-4 py-2 bg-gray-200 dark:bg-gray-950 rounded-lg">
+      <div className="flex gap-5 overflow-x-auto px-4 py-2 border bg-gray-100 dark:bg-slate-950 dark:border-gray-600 rounded-lg">
         <EnrolledCourseCard
           title={"React"}
           progress={"0"}

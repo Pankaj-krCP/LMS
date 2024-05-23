@@ -5,7 +5,7 @@ import LectureTopBar from "../../../../_component/my-learning/study/LectureTopBa
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (
     <div>
-      <div className="inline-flex fixed left-0 top-[50px] border-b dark:border-gray-600 bg-white dark:bg-inherit w-full">
+      <div className="inline-flex fixed left-0 top-[50px] border-b dark:border-gray-600  dark:bg-inherit w-full">
         <LectureTopBar />
       </div>
       <div className="flex">

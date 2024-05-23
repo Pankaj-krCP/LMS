@@ -55,7 +55,7 @@ const SingleCourseBody = () => {
   return (
     <div className="text-center">
       <div
-        className={`m-4 p-3 inline-block border bg-white dark:bg-slate-900 dark:border-gray-600 rounded-full ${customShadow}`}
+        className={`m-4 p-3 inline-block border   dark:border-gray-600 rounded-full ${customShadow}`}
       >
         {courseDeatailsTabData.map((tab) => (
           <button
@@ -67,7 +67,7 @@ const SingleCourseBody = () => {
           </button>
         ))}
       </div>
-      <div className="p-2 m-2 400px:mx-10 800px:max-w-[50%] 800px:mx-auto bg-white dark:bg-slate-950 rounded-lg shadow-lg">
+      <div className="p-2 m-2 400px:mx-10 800px:max-w-[50%] 800px:mx-auto  dark:bg-slate-950 rounded-lg shadow-lg">
         <div className="text-start">{renderTabContent()}</div>
       </div>
       <div className="mx-2 my-4 400px:mx-10 800px:max-w-[50%] 800px:mx-auto">

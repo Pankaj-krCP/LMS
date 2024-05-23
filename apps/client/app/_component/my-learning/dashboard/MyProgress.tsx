@@ -79,9 +79,7 @@ const MyProgress = () => {
   };
 
   return (
-    <div
-      className={`bg-white dark:bg-slate-800 p-4 rounded-lg col-span-2 ${customShadow}`}
-    >
+    <div className={`  p-4 rounded-lg col-span-2 ${customShadow}`}>
       <h2 className={`${underlineGreenCSS} text-lg font-semibold mb-2`}>
         Progress Chart
       </h2>

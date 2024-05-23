@@ -32,7 +32,7 @@ const Certificate = () => {
       {certificates.map((certificate) => (
         <div
           key={certificate.id}
-          className={`bg-white dark:bg-slate-800 p-4 rounded-lg mb-4 ${customShadow}`}
+          className={`  p-4 rounded-lg mb-4 ${customShadow}`}
         >
           <div className="flex items-center">
             <div className="w-1/2">
@@ -56,7 +56,7 @@ const Certificate = () => {
               </p>
             </div>
             <div className="w-1/2 flex justify-center items-center">
-              <div className="w-72 h-52 border dark:border-gray-600 bg-gray-200 rounded-lg flex flex-col justify-center items-center">
+              <div className="w-72 h-52 border dark:border-gray-600 rounded-lg flex flex-col justify-center items-center">
                 <p className="text-gray-600">Your Certificate</p>
                 <div className="flex justify-center items-center mt-4">
                   <button
