@@ -67,7 +67,9 @@ const SingleCourseBody = () => {
           </button>
         ))}
       </div>
-      <div className="p-2 m-2 400px:mx-10 800px:max-w-[50%] 800px:mx-auto  dark:bg-slate-950 rounded-lg shadow-lg">
+      <div
+        className={`p-2 m-2 400px:mx-10 800px:max-w-[50%] 800px:mx-auto rounded-lg ${customShadow}`}
+      >
         <div className="text-start">{renderTabContent()}</div>
       </div>
       <div className="mx-2 my-4 400px:mx-10 800px:max-w-[50%] 800px:mx-auto">
