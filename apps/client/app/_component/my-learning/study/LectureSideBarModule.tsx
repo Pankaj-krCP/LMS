@@ -2,21 +2,18 @@
 
 import React, { useState } from "react";
 import { FaCheckCircle } from "react-icons/fa";
-import { customShadow, underlineGreenCSS } from "../../../_utils/constant";
 
 const LectureSideBarModule = ({ module }: { module: any }) => {
   const [isOpen, setIsOpen] = useState(true);
 
   return (
-    <div
-      className={`p-1 py-4 border mb-2 dark:border-gray-600 rounded-lg ${customShadow} `}
-    >
+    <div className={`py-2 mb-1`}>
       <div
         className="flex items-center justify-between px-2 cursor-pointer"
         onClick={() => setIsOpen(!isOpen)}
       >
         <div>
-          <p className={`font-semibold ${underlineGreenCSS}`}>{module.title}</p>
+          <p className={`font-bold hover:text-red-600`}>{module.title}</p>
         </div>
       </div>
 
@@ -28,7 +25,7 @@ const LectureSideBarModule = ({ module }: { module: any }) => {
                 <span className="mr-1 mt-1">
                   <FaCheckCircle size={16} fill={"green"} />
                 </span>
-                <span>{lecture?.title}</span>
+                <span className="hover:text-red-600">{lecture?.title}</span>
               </li>
             ))}
           </ul>
