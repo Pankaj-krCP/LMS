@@ -1,6 +1,6 @@
 import React from "react";
-import LectureSideBar from "../../../../_component/my-learning/study/LectureSideBar";
-import LectureTopBar from "../../../../_component/my-learning/study/LectureTopBar";
+import LectureSideBar from "../../../../_component/my-learning/study/module/LectureSideBar";
+import LectureTopBar from "../../../../_component/my-learning/study/module/LectureTopBar";
 
 const Layout = ({ children }: { children: React.ReactNode }) => {
   return (

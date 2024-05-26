@@ -20,7 +20,7 @@ const EnrolledCourseCard: React.FC<Props> = ({
   const router = useRouter();
 
   const onClickHandler = () => {
-    router.push("/my-learning/study/courseid");
+    router.push("/my-learning/study/slug");
   };
 
   return (

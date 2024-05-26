@@ -1,7 +1,7 @@
 "use client";
 
-import { courses, customShadow } from "../../../_utils/constant";
-import CustomInput from "../../common/CustomInput";
+import { courses, customShadow } from "../../../../_utils/constant";
+import CustomInput from "../../../common/CustomInput";
 import VideoPlayer from "./VideoPlayer";
 import { IoMdSend } from "react-icons/io";
 import { FaCircleUser } from "react-icons/fa6";
