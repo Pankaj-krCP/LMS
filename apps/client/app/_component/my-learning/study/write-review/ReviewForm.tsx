@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { customShadow } from "../../../../_utils/constant";
 
 const ReviewForm: React.FC = () => {
   const [rating, setRating] = useState<number | null>(0);
@@ -17,7 +18,7 @@ const ReviewForm: React.FC = () => {
   return (
     <form
       onSubmit={handleSubmit}
-      className="flex flex-col max-w-md mx-auto mt-8 p-4 border dark:border-gray-600 rounded shadow-lg"
+      className={`flex flex-col max-w-md mx-auto mt-8 p-4 border dark:border-gray-600 rounded ${customShadow}`}
     >
       <div className="mb-4">
         <label className="block text-sm font-medium mb-2">Rating:</label>

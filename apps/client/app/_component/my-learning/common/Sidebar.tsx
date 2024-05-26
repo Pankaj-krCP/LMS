@@ -13,7 +13,6 @@ interface Iitem {
 const navigation = [
   { title: "Dashboard", url: "/my-learning" },
   { title: "Study", url: "/my-learning/study" },
-  { title: "Discussion", url: "/my-learning/discussion" },
   { title: "Certificate", url: "/my-learning/certificate" },
 ];
 

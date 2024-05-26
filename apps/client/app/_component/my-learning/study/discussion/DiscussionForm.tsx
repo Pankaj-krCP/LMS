@@ -2,7 +2,7 @@
 
 import React, { useState } from "react";
 
-const Discussion: React.FC = () => {
+const DiscussionForm: React.FC = () => {
   const [comments, setComments] = useState<string[]>([]);
   const [newComment, setNewComment] = useState<string>("");
 
@@ -22,7 +22,7 @@ const Discussion: React.FC = () => {
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
           rows={4}
-          className="w-full p-2 border rounded mb-2"
+          className="w-full p-2 border dark:border-gray-600 rounded mb-2 bg-inherit"
           placeholder="Add a comment..."
         ></textarea>
         <button
@@ -43,4 +43,4 @@ const Discussion: React.FC = () => {
   );
 };
 
-export default Discussion;
+export default DiscussionForm;

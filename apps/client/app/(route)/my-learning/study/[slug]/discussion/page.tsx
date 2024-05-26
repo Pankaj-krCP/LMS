@@ -1,10 +1,13 @@
 import React from "react";
-import Discussion from "../../../../../_component/my-learning/study/discussion/Discussion";
+import DiscussionForm from "../../../../../_component/my-learning/study/discussion/DiscussionForm";
+import UserDiscussion from "../../../../../_component/my-learning/study/discussion/UserDiscussion";
 
 const page = () => {
   return (
     <div>
-      <Discussion />
+      <DiscussionForm />
+      <hr className="dark:border-gray-600" />
+      <UserDiscussion />
     </div>
   );
 };
