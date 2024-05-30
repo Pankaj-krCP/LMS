@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
+import { customShadow } from "../../../../_utils/constant";
 
 const DiscussionForm: React.FC = () => {
   const [comments, setComments] = useState<string[]>([]);
@@ -15,9 +16,12 @@ const DiscussionForm: React.FC = () => {
   };
 
   return (
-    <div className="max-w-2xl mx-auto p-4">
-      <h1 className="text-2xl font-bold mb-4">Create new thread</h1>
-      <form onSubmit={handleCommentSubmit} className="mb-4">
+    <div className="max-w-2xl mx-auto">
+      <form
+        onSubmit={handleCommentSubmit}
+        className={`flex flex-col max-w-md mx-auto mt-8 p-4 border dark:border-gray-600 rounded ${customShadow}`}
+      >
+        {" "}
         <textarea
           value={newComment}
           onChange={(e) => setNewComment(e.target.value)}
@@ -27,7 +31,7 @@ const DiscussionForm: React.FC = () => {
         ></textarea>
         <button
           type="submit"
-          className="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600"
+          className="px-4 py-2 bg-blue-500 text-white font-semibold rounded hover:bg-blue-600 w-full"
         >
           Submit
         </button>

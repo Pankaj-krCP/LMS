@@ -8,11 +8,13 @@ const page = () => {
     <div className="container mx-auto p-4">
       <div className="my-4">
         <h2 className={`${underlineBlueCSS} text-center`}>Leave a Review</h2>
-      </div>{" "}
-      <ReviewForm />
-      <div className="mt-8">
-        <UserReview />
       </div>
+      <ReviewForm />
+      <hr className="dark:border-gray-600 mt-4" />
+      <div className="my-4">
+        <h2 className={`${underlineBlueCSS} text-center`}>All Reviews</h2>
+      </div>
+      <UserReview />
     </div>
   );
 };
