@@ -80,12 +80,12 @@ export const courses = [
           {
             title: "Introduction to Arrays",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://array-intro-notes.com",
+            type: "video",
           },
           {
             title: "Introduction to Arrays",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://array-intro-notes.com",
+            type: "article",
           },
         ],
       },
@@ -95,12 +95,12 @@ export const courses = [
           {
             title: "Introduction to Matrices",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://matrix-intro-notes.com",
+            type: "video",
           },
           {
             title: "Introduction to Matrices",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://matrix-intro-notes.com",
+            type: "article",
           },
         ],
       },
@@ -148,12 +148,12 @@ export const courses = [
           {
             title: "Introduction to Searching Algorithms",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://searching-intro-notes.com",
+            type: "video",
           },
           {
             title: "Linear Search",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://linear-search-notes.com",
+            type: "article",
           },
         ],
       },
@@ -163,12 +163,12 @@ export const courses = [
           {
             title: "Introduction to Sorting Algorithms",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://sorting-intro-notes.com",
+            type: "video",
           },
           {
             title: "Bubble Sort",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://bubble-sort-notes.com",
+            type: "article",
           },
         ],
       },
@@ -216,12 +216,12 @@ export const courses = [
           {
             title: "Introduction to HTML",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://html-intro-notes.com",
+            type: "video",
           },
           {
             title: "HTML Tags and Elements",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://html-tags-notes.com",
+            type: "article",
           },
         ],
       },
@@ -231,12 +231,12 @@ export const courses = [
           {
             title: "Introduction to CSS",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://css-intro-notes.com",
+            type: "video",
           },
           {
             title: "CSS Selectors and Properties",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://css-selectors-notes.com",
+            type: "article",
           },
         ],
       },
@@ -284,12 +284,12 @@ export const courses = [
           {
             title: "Introduction to JavaScript",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://javascript-intro-notes.com",
+            type: "video",
           },
           {
             title: "JavaScript Variables and Data Types",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://javascript-variables-notes.com",
+            type: "article",
           },
         ],
       },
@@ -299,12 +299,12 @@ export const courses = [
           {
             title: "JavaScript Functions",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://javascript-functions-notes.com",
+            type: "video",
           },
           {
             title: "JavaScript Objects",
             url: "https://www.youtube.com/watch?v=...",
-            notes: "http://javascript-objects-notes.com",
+            type: "article",
           },
         ],
       },
