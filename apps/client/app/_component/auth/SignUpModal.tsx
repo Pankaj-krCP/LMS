@@ -2,7 +2,7 @@
 
 import React, { useCallback, useState } from "react";
 
-import CustomInput from "../common/CustomInput";
+import CustomInput from "@repo/ui/customInput";
 import Modal from "@repo/ui/modal";
 
 const SignUpModal = () => {

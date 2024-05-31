@@ -4,6 +4,7 @@
   "private": true,
   "exports": {
     "./button": "./src/button.tsx",
+    "./customInput": "./src/customInput.tsx",
     "./header": "./src/header.tsx",
     "./linkButton": "./src/linkButton.tsx",
     "./meta": "./src/meta.tsx",

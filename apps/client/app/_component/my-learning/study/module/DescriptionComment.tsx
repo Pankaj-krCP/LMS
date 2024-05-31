@@ -1,5 +1,5 @@
 import React from "react";
-import CustomInput from "../../../common/CustomInput";
+import CustomInput from "@repo/ui/customInput";
 import { IoMdSend } from "react-icons/io";
 import { FaCircleUser } from "react-icons/fa6";
 import { AiTwotoneLike, AiTwotoneDislike } from "react-icons/ai";
