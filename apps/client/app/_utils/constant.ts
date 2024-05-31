@@ -79,7 +79,7 @@ export const courses = [
         lectures: [
           {
             title: "Introduction to Arrays",
-            url: "https://www.youtube.com/watch?v=...",
+            url: "https://youtu.be/EFg3u_E6eHU?si=RPCO6yVnq-VDBjRF",
             type: "video",
           },
           {

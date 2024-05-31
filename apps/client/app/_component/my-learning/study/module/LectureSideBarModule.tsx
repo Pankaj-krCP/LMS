@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState } from "react";
-import { FaCheckCircle, FaVideo, FaFilePdf } from "react-icons/fa";
+import { FaVideo, FaFilePdf } from "react-icons/fa";
 
 const LectureSideBarModule = ({ module }: { module: any }) => {
   const [isOpen, setIsOpen] = useState(true);
@@ -22,27 +22,39 @@ const LectureSideBarModule = ({ module }: { module: any }) => {
           <ul>
             {module.lectures.map((lecture: any, index: number) => (
               <li key={index} className="flex items-center">
-                {/* <span className="mr-1 mt-1">
-                  <FaCheckCircle size={16} fill={"green"} />
-                </span> */}
-
                 {lecture?.type === "video" && (
-                  <div className="flex mt-2 ml-2 cursor-pointer items-center gap-1">
-                    <span className="text-sm opacity-50">
-                      <FaVideo />
-                    </span>
-                    <span className="hover:text-red-600">{lecture?.title}</span>
-                    <span className="text-sm px-1 bg-gray-200 dark:bg-gray-700 rounded">
-                      1h:3m
-                    </span>
+                  <div className="w-full">
+                    <div className="flex m-1 cursor-pointer items-center gap-1">
+                      <span className="text-sm text-green-400 dark:text-green-700">
+                        <FaVideo />
+                      </span>
+
+                      <span className="hover:text-red-600">
+                        {lecture?.title}
+                      </span>
+                      <span className="text-sm px-1 bg-gray-200 dark:bg-gray-700 rounded">
+                        1h:3m
+                      </span>
+                    </div>
+                    <div className="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div className="w-[60%] h-[2px] bg-green-300 dark:bg-green-700 rounded-full"></div>
+                    </div>
                   </div>
                 )}
                 {lecture?.type === "article" && (
-                  <div className="flex mt-2 ml-2 cursor-pointer items-center gap-1">
-                    <span className="text-sm opacity-50">
-                      <FaFilePdf />
-                    </span>
-                    <span className="hover:text-red-600">{lecture?.title}</span>
+                  <div className="w-full">
+                    <div className="flex m-1 cursor-pointer items-center gap-1">
+                      <span className="text-sm text-red-400 dark:text-red-700">
+                        <FaFilePdf />
+                      </span>
+
+                      <span className="hover:text-red-600">
+                        {lecture?.title}
+                      </span>
+                    </div>
+                    <div className="bg-gray-200 dark:bg-gray-700 rounded-full">
+                      <div className="w-[30%] h-[2px] bg-red-300 dark:bg-red-700 rounded-full"></div>
+                    </div>
                   </div>
                 )}
               </li>

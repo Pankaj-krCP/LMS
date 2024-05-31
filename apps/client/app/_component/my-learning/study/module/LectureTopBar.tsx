@@ -3,11 +3,11 @@
 import { useRouter } from "next/navigation";
 import React from "react";
 import {
-  FaArrowLeft,
-  FaArrowRight,
   FaCheckCircle,
   FaHome,
   FaAngleRight,
+  FaVideo,
+  FaAngleLeft,
 } from "react-icons/fa";
 
 const LectureTopBar = () => {
@@ -38,7 +38,10 @@ const LectureTopBar = () => {
           <div>
             <FaAngleRight size={18} />
           </div>
-          <div>
+          <div className="flex items-center gap-1">
+            <span className="text-sm text-green-400 dark:text-green-700">
+              <FaVideo />
+            </span>
             <span className="text-blue-500 font-semibold">
               Introduction to Array
             </span>
@@ -46,7 +49,7 @@ const LectureTopBar = () => {
         </div>
         <div className={`flex gap-5 font-semibold`}>
           <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-red-700">
-            <FaArrowLeft size={12} />
+            <FaAngleLeft size={18} />
             <p>Previous</p>
           </div>
           <div className="flex cursor-pointer">
@@ -57,7 +60,7 @@ const LectureTopBar = () => {
           </div>
           <div className="flex items-center justify-center gap-1 cursor-pointer hover:text-red-700">
             <p>Next</p>
-            <FaArrowRight size={12} />
+            <FaAngleRight size={18} />
           </div>
         </div>
       </div>

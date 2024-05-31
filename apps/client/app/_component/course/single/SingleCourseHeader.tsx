@@ -35,9 +35,9 @@ const SingleCourseHeader = () => {
         </Link>
 
         <div className="p-2 border-l dark:border-gray-600">
-          single :{" "}
+          course:{" "}
           <span className="text-blue-500">
-            {courseId} : {courseTitle}
+            {courseId} - {courseTitle}
           </span>
         </div>
       </div>

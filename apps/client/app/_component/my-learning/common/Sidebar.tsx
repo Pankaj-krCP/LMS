@@ -3,7 +3,6 @@
 import React, { useState } from "react";
 import Link from "next/link";
 import { usePathname, useRouter } from "next/navigation";
-import { customShadow } from "../../../_utils/constant";
 
 interface Iitem {
   title: string;
@@ -35,7 +34,7 @@ const Sidebar = () => {
         return (
           <div
             key={index}
-            className={`my-4 border dark:border-gray-600 rounded-xl cursor-pointer ${selectedOption === item.title ? "bg-blue-500 text-white rounded-xl" : "hover:bg-blue-300 hover:text-white hover:rounded-xl"} ${customShadow}`}
+            className={`my-4 w-full cursor-pointer ${selectedOption === item.title ? "bg-blue-500 text-white" : "hover:bg-blue-300 hover:text-white"} shadow rounded`}
             onClick={() => {
               navigationHandler(item);
             }}

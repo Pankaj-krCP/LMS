@@ -3,8 +3,6 @@ import React from "react";
 import { underlineBlueCSS } from "../../../_utils/constant";
 import Progress from "./CourseProgress";
 import Calender from "./Calender";
-import SubmittedWork from "./SubmittedWork";
-import PendingWork from "./PendingWork";
 import MyProgress from "./MyProgress";
 
 const DashboardBody = () => {
@@ -16,8 +14,6 @@ const DashboardBody = () => {
       <div className="grid grid-cols-2 gap-4">
         <Progress />
         <Calender />
-        <PendingWork />
-        <SubmittedWork />
         <MyProgress />
       </div>
     </div>
