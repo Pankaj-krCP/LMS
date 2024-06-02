@@ -1,7 +1,7 @@
 import React from "react";
 
 const AdminBody = () => {
-  return <div className="mt-[100px]">Admin</div>;
+  return <div>Admin</div>;
 };
 
 export default AdminBody;

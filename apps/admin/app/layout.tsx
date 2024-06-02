@@ -2,6 +2,7 @@ import "./globals.css";
 import { ThemeProvider } from "@repo/ui/theme-provider";
 import AdminHeader from "./_component/home/Header";
 import SignInModal from "./_component/auth/SignInModal";
+import SideBar from "./_component/home/SideBar";
 
 export default function RootLayout({
   children,
@@ -16,7 +17,13 @@ export default function RootLayout({
           <header>
             <AdminHeader />
           </header>
-          <div>{children}</div>
+          <div className="fixed left-0 top-12 w-[20%] h-screen border-r dark:border-gray-600">
+            <SideBar />
+          </div>
+
+          <div className="fixed left-[20%] top-12 w-[80%] min-h-screen">
+            {children}
+          </div>
         </ThemeProvider>
       </body>
     </html>
